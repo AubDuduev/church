@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fhH-Yn-FjT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Abaut View Controller-->
+        <scene sceneID="Tdc-fg-JnH">
+            <objects>
+                <viewController storyboardIdentifier="AbautViewController" id="fhH-Yn-FjT" customClass="AbautViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qSM-YT-jQo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1605"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="moG-pq-3e5" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1527"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-r5-kQF" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1527"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uq-ZT-7W3" userLabel="TopClouseView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouseOrder" translatesAutoresizingMaskIntoConstraints="NO" id="CZV-es-oh2">
+                                                        <rect key="frame" x="145" y="0.0" width="124" height="38"/>
+                                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znD-qs-VYd">
+                                                        <rect key="frame" x="192" y="0.0" width="30" height="38"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="CZV-es-oh2" secondAttribute="bottom" id="ARF-zB-gIP"/>
+                                                    <constraint firstItem="znD-qs-VYd" firstAttribute="centerX" secondItem="9uq-ZT-7W3" secondAttribute="centerX" id="Dnc-15-G3g"/>
+                                                    <constraint firstItem="CZV-es-oh2" firstAttribute="top" secondItem="9uq-ZT-7W3" secondAttribute="top" id="I0M-Ll-cts"/>
+                                                    <constraint firstItem="CZV-es-oh2" firstAttribute="centerX" secondItem="9uq-ZT-7W3" secondAttribute="centerX" id="Whg-Zr-W6e"/>
+                                                    <constraint firstAttribute="bottom" secondItem="znD-qs-VYd" secondAttribute="bottom" id="Z10-5k-Md4"/>
+                                                    <constraint firstAttribute="height" constant="38" id="dgP-PA-ZvA"/>
+                                                    <constraint firstItem="znD-qs-VYd" firstAttribute="top" secondItem="9uq-ZT-7W3" secondAttribute="top" id="ukR-iI-kOB"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-aE-pS0" userLabel="TitleView">
+                                                <rect key="frame" x="0.0" y="38" width="414" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О Храме" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTl-nX-U8T">
+                                                        <rect key="frame" x="163" y="0.0" width="88" height="50"/>
+                                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="21"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="wTl-nX-U8T" secondAttribute="bottom" id="8jR-1T-aLB"/>
+                                                    <constraint firstAttribute="height" constant="50" id="KZl-Vn-WHu"/>
+                                                    <constraint firstItem="wTl-nX-U8T" firstAttribute="centerX" secondItem="aAT-aE-pS0" secondAttribute="centerX" id="gFK-ce-3PE"/>
+                                                    <constraint firstItem="wTl-nX-U8T" firstAttribute="top" secondItem="aAT-aE-pS0" secondAttribute="top" id="xUs-JN-dQL"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hO-jk-P5b" userLabel="ScrollViewView">
+                                                <rect key="frame" x="0.0" y="88" width="414" height="1439"/>
+                                                <subviews>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Dc-FO-ViJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1439"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7MZ-NE-Kvv" userLabel="CollectionViewView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="289"/>
+                                                                <subviews>
+                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9xO-Ca-Gro">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="289"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zhJ-hG-KtF">
+                                                                            <size key="itemSize" width="128" height="128"/>
+                                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                        </collectionViewFlowLayout>
+                                                                        <cells/>
+                                                                        <connections>
+                                                                            <outlet property="dataSource" destination="DZm-xi-ndB" id="kab-Mg-jmx"/>
+                                                                            <outlet property="delegate" destination="DZm-xi-ndB" id="lH6-6T-734"/>
+                                                                        </connections>
+                                                                    </collectionView>
+                                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HAo-KH-ZkM">
+                                                                        <rect key="frame" x="146" y="261.5" width="122.5" height="27.5"/>
+                                                                        <color key="pageIndicatorTintColor" systemColor="systemGrayColor"/>
+                                                                        <color key="currentPageIndicatorTintColor" name="projectBlue"/>
+                                                                    </pageControl>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="7MZ-NE-Kvv" secondAttribute="height" multiplier="414:289" id="AG1-fh-anT"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="HAo-KH-ZkM" secondAttribute="bottom" id="AO5-w8-mwc"/>
+                                                                    <constraint firstItem="9xO-Ca-Gro" firstAttribute="top" secondItem="7MZ-NE-Kvv" secondAttribute="top" id="LD0-s6-PMm"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="9xO-Ca-Gro" secondAttribute="bottom" id="VvV-RV-g7W"/>
+                                                                    <constraint firstItem="HAo-KH-ZkM" firstAttribute="centerX" secondItem="7MZ-NE-Kvv" secondAttribute="centerX" id="fAD-se-Upi"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="9xO-Ca-Gro" secondAttribute="trailing" id="g24-0p-XlO"/>
+                                                                    <constraint firstItem="9xO-Ca-Gro" firstAttribute="leading" secondItem="7MZ-NE-Kvv" secondAttribute="leading" id="ggc-jg-Bgc"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lf7-al-Cdu" userLabel="TextView">
+                                                                <rect key="frame" x="0.0" y="289" width="414" height="1150"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-fH-XPh">
+                                                                        <rect key="frame" x="10" y="0.0" width="394" height="1150"/>
+                                                                        <string key="text">   1. Колокольня храма Святителя Николая Чудотворца в Подкопаях построена в 1759 году. Она сочетает в себе черты древнерусского зодчества и барокко. Сооружение является объектом культурного наследия федерального значения. 
+   2. Деревянный Храм Святого Николая в Подкопаях впервые упоминается в 1493 году. Он попал в древнерусскую хронику в связи с соседством с великокняжеским загородным дворцом, который также находился в местности Кулишки у слияния рек Москвы и Яузы. Великий московский князь Василий I в 1493 году проживал в этом дворце, ожидая восстановления своего дворца в Кремле, пострадавшего во время пожара.
+   3. Название «Подкопаево» по одной из версий связано с находившимися поблизости раскопками красной глины, у берега реки Рачки. В середине 18 века эта речка была заключена в трубу, а место добычи глины было застроено жилыми домами. Однако название храма осталось прежним — в Подкопаях.
+   4. В 1629 году деревянную церковь разобрали и на ее месте была возведена новая каменная церковь святого Николая.
+   5. В 1812 году из-за наполеоновского нашествия все храмы в Кулишках так или иначе пострадали от пожаров. Храм Святого Николая в Подкопаях после пожара 1812 года пустовал больше 40 лет.
+   6. С 1855 года началось его восстановление по проекту архитектора Н. И. Козловского и закончилось в 1858 году. В 1858 г. храм свят. Николая в Подкопаях был освящен прославленным впоследствии в лике святых митрополитом Филаретом Московским и епископом Фиваидским Никанором.
+   7. В 1929 году церковь была закрыта, здание переоборудовано под производственный цех завода «Полиэтилен», который просуществовал здесь до 1990 года.
+   8. В 1991 году храм был восстановлен и освящен. В храме существовали ранее воскресная школа для детей, военно-патриотическая школа для мальчиков, а также школа риторики для взрослых.
+   9. В исторических источниках Никольский храм близ великокняжеской резиденции у основания Ивановской горки, упоминается, начиная с XVв. А переулок, в котором стоял храм, одно время так и назывался – Никольский.
+   10. В  послереволюционные 20-ые годы храму удалось избежать закрытия, благодаря тому, что в нем зарегистрировалась греческая община. Храм был закрыт в 30-е годы.</string>
+                                                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="hqe-fH-XPh" firstAttribute="leading" secondItem="lf7-al-Cdu" secondAttribute="leading" constant="10" id="8ag-eg-MR7"/>
+                                                                    <constraint firstItem="hqe-fH-XPh" firstAttribute="top" secondItem="lf7-al-Cdu" secondAttribute="top" id="Bj9-6b-npI"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="hqe-fH-XPh" secondAttribute="trailing" constant="10" id="Fdw-84-faN"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="hqe-fH-XPh" secondAttribute="bottom" id="LeW-wP-2K9"/>
+                                                                    <constraint firstAttribute="height" constant="1150" id="kbK-EL-mRm"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="7MZ-NE-Kvv" firstAttribute="top" secondItem="8Dc-FO-ViJ" secondAttribute="top" id="DQ3-N3-f1r"/>
+                                                            <constraint firstAttribute="trailing" secondItem="lf7-al-Cdu" secondAttribute="trailing" id="JlR-Qk-5zb"/>
+                                                            <constraint firstAttribute="bottom" secondItem="lf7-al-Cdu" secondAttribute="bottom" id="cvD-F8-tlb"/>
+                                                            <constraint firstItem="7MZ-NE-Kvv" firstAttribute="width" secondItem="8Dc-FO-ViJ" secondAttribute="width" id="d0w-tg-Mk2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="7MZ-NE-Kvv" secondAttribute="trailing" id="eE1-mc-wdh"/>
+                                                            <constraint firstItem="lf7-al-Cdu" firstAttribute="top" secondItem="7MZ-NE-Kvv" secondAttribute="bottom" id="gLt-4L-NtP"/>
+                                                            <constraint firstItem="lf7-al-Cdu" firstAttribute="top" secondItem="7MZ-NE-Kvv" secondAttribute="bottom" id="ibl-SA-qQd"/>
+                                                            <constraint firstItem="7MZ-NE-Kvv" firstAttribute="leading" secondItem="8Dc-FO-ViJ" secondAttribute="leading" id="jJi-Km-DEb"/>
+                                                            <constraint firstItem="lf7-al-Cdu" firstAttribute="leading" secondItem="8Dc-FO-ViJ" secondAttribute="leading" id="pBb-Ap-FLP"/>
+                                                        </constraints>
+                                                    </scrollView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="8Dc-FO-ViJ" firstAttribute="leading" secondItem="9hO-jk-P5b" secondAttribute="leading" id="RuP-Xk-qi6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8Dc-FO-ViJ" secondAttribute="trailing" id="Vdg-Cs-Bi6"/>
+                                                    <constraint firstItem="8Dc-FO-ViJ" firstAttribute="height" secondItem="9hO-jk-P5b" secondAttribute="height" id="WTo-rG-2pg"/>
+                                                    <constraint firstItem="8Dc-FO-ViJ" firstAttribute="top" secondItem="9hO-jk-P5b" secondAttribute="top" id="Wpo-xp-PSX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8Dc-FO-ViJ" secondAttribute="bottom" id="t7v-dc-J2f"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EEc-r5-kQF" secondAttribute="trailing" id="Nuv-9S-khj"/>
+                                    <constraint firstAttribute="bottom" secondItem="EEc-r5-kQF" secondAttribute="bottom" id="hLv-2M-Vxe"/>
+                                    <constraint firstItem="EEc-r5-kQF" firstAttribute="leading" secondItem="moG-pq-3e5" secondAttribute="leading" id="ih8-2S-a3O"/>
+                                    <constraint firstItem="EEc-r5-kQF" firstAttribute="top" secondItem="moG-pq-3e5" secondAttribute="top" id="qoG-pw-efI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Hh-Cg-Ohc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Dc-FO-ViJ" firstAttribute="width" secondItem="qSM-YT-jQo" secondAttribute="width" id="GSl-RZ-rbH"/>
+                            <constraint firstAttribute="trailing" secondItem="moG-pq-3e5" secondAttribute="trailing" id="P5a-jk-Hhb"/>
+                            <constraint firstItem="moG-pq-3e5" firstAttribute="top" secondItem="6Hh-Cg-Ohc" secondAttribute="top" id="jjm-g0-qjN"/>
+                            <constraint firstItem="moG-pq-3e5" firstAttribute="leading" secondItem="qSM-YT-jQo" secondAttribute="leading" id="ocN-L8-jk7"/>
+                            <constraint firstItem="6Hh-Cg-Ohc" firstAttribute="bottom" secondItem="moG-pq-3e5" secondAttribute="bottom" id="zOt-tm-uDi"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1605"/>
+                    <connections>
+                        <outlet property="abautCollection" destination="DZm-xi-ndB" id="0W1-BB-kCS"/>
+                        <outlet property="abautCollectionView" destination="9xO-Ca-Gro" id="sMq-Zd-ros"/>
+                        <outlet property="pageControll" destination="HAo-KH-ZkM" id="wp0-mu-kcO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4G-hu-MpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="DZm-xi-ndB" customClass="AbautCollection" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="152.67857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clouseOrder" width="124" height="124"/>
+        <namedColor name="projectBlue">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

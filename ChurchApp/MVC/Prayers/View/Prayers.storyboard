@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uaG-XB-ScO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Prayers View Controller-->
+        <scene sceneID="qKd-UF-pFe">
+            <objects>
+                <viewController storyboardIdentifier="PrayersViewController" id="uaG-XB-ScO" customClass="PrayersViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qYl-8p-SKK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yp-5v-WdE" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3xy-32-HTi" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CE-Ua-2h3" userLabel="NavBarView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7h-dF-4kL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="P7h-dF-4kL" secondAttribute="height" multiplier="1:1" id="dVk-JR-g0A"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="tabBarFon"/>
+                                                        <state key="normal" image="exit"/>
+                                                        <connections>
+                                                            <action selector="backButtonWithButton:" destination="uaG-XB-ScO" eventType="touchUpInside" id="Utf-0P-P76"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Молитвослов" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-HW-iti">
+                                                        <rect key="frame" x="60" y="0.0" width="294" height="60"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="24"/>
+                                                        <color key="textColor" name="projectBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="navBarFon"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="GJd-HW-iti" secondAttribute="bottom" id="3Q6-oh-rRo"/>
+                                                    <constraint firstAttribute="bottom" secondItem="P7h-dF-4kL" secondAttribute="bottom" id="Abj-fP-mfU"/>
+                                                    <constraint firstItem="P7h-dF-4kL" firstAttribute="leading" secondItem="0CE-Ua-2h3" secondAttribute="leading" id="N55-9C-YAB"/>
+                                                    <constraint firstAttribute="height" constant="60" id="S95-da-F11"/>
+                                                    <constraint firstAttribute="trailing" secondItem="GJd-HW-iti" secondAttribute="trailing" constant="60" id="T0l-yh-bSO"/>
+                                                    <constraint firstItem="GJd-HW-iti" firstAttribute="top" secondItem="0CE-Ua-2h3" secondAttribute="top" id="Y8G-hP-XNX"/>
+                                                    <constraint firstItem="P7h-dF-4kL" firstAttribute="top" secondItem="0CE-Ua-2h3" secondAttribute="top" id="elS-an-OO3"/>
+                                                    <constraint firstItem="GJd-HW-iti" firstAttribute="leading" secondItem="P7h-dF-4kL" secondAttribute="trailing" id="fPY-0y-Pr9"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbW-EQ-3Ny" userLabel="EmptyView">
+                                                <rect key="frame" x="0.0" y="60" width="414" height="1"/>
+                                                <color key="backgroundColor" name="projectBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="9jZ-Mh-tzN"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Am-mR-VNo" userLabel="TableViewView">
+                                                <rect key="frame" x="0.0" y="61" width="414" height="757"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agD-w9-FCZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="hEr-D4-f55" id="O9C-3Z-W5v"/>
+                                                            <outlet property="delegate" destination="hEr-D4-f55" id="Lds-np-JVC"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="agD-w9-FCZ" secondAttribute="bottom" id="GRN-gi-brX"/>
+                                                    <constraint firstItem="agD-w9-FCZ" firstAttribute="top" secondItem="7Am-mR-VNo" secondAttribute="top" id="SkZ-ds-aNl"/>
+                                                    <constraint firstItem="agD-w9-FCZ" firstAttribute="leading" secondItem="7Am-mR-VNo" secondAttribute="leading" id="Xzs-0t-9ey"/>
+                                                    <constraint firstAttribute="trailing" secondItem="agD-w9-FCZ" secondAttribute="trailing" id="ZZX-Lp-MjA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3xy-32-HTi" firstAttribute="top" secondItem="8yp-5v-WdE" secondAttribute="top" id="Oar-Xh-F75"/>
+                                    <constraint firstItem="3xy-32-HTi" firstAttribute="leading" secondItem="8yp-5v-WdE" secondAttribute="leading" id="TlF-SD-hGS"/>
+                                    <constraint firstAttribute="bottom" secondItem="3xy-32-HTi" secondAttribute="bottom" id="tEx-Yn-PNU"/>
+                                    <constraint firstAttribute="trailing" secondItem="3xy-32-HTi" secondAttribute="trailing" id="uoU-vV-5ob"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAR-Cp-uJJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8yp-5v-WdE" firstAttribute="leading" secondItem="qYl-8p-SKK" secondAttribute="leading" id="Osa-8G-riu"/>
+                            <constraint firstItem="8yp-5v-WdE" firstAttribute="top" secondItem="SAR-Cp-uJJ" secondAttribute="top" id="R8t-UA-e2z"/>
+                            <constraint firstAttribute="trailing" secondItem="8yp-5v-WdE" secondAttribute="trailing" id="UWc-2P-fK9"/>
+                            <constraint firstItem="SAR-Cp-uJJ" firstAttribute="bottom" secondItem="8yp-5v-WdE" secondAttribute="bottom" id="a5C-1l-xt5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBarTitleLabel" destination="GJd-HW-iti" id="Kmh-Wd-XNF"/>
+                        <outlet property="prayersTable" destination="hEr-D4-f55" id="W2z-5r-OuA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPb-vX-pN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="hEr-D4-f55" customClass="PrayersTable" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="237.68115942028987" y="173.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exit" width="30" height="30"/>
+        <namedColor name="navBarFon">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="projectBlue">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

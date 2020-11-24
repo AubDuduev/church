@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wLo-ec-AgB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="R72-Mg-K5G">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="wLo-ec-AgB" customClass="ChatViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zje-CO-1iG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kb-AQ-8Ry" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="GKV-8j-MzT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ft-U2-6aK" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="103" width="414" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundStart" translatesAutoresizingMaskIntoConstraints="NO" id="fnX-Fg-1UK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qhm-Mt-Eby" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xNx-rg-KPT">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="664"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="v9V-fQ-Rfw" id="R9n-GD-dpk"/>
+                                                    <outlet property="delegate" destination="v9V-fQ-Rfw" id="kLq-41-Ifi"/>
+                                                </connections>
+                                            </tableView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4S-VX-uBY" userLabel="SendMessageView">
+                                                <rect key="frame" x="0.0" y="664" width="414" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-Hk-0gA">
+                                                        <rect key="frame" x="9" y="16" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="U5G-u2-vrH"/>
+                                                            <constraint firstAttribute="width" secondItem="Ezr-Hk-0gA" secondAttribute="height" multiplier="1:1" id="WpS-qG-AiL"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="sendFileMessage"/>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-9j-0GS" userLabel="StackView">
+                                                        <rect key="frame" x="63" y="20" width="288" height="35"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-ja-GaV" userLabel="TextMessageView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
+                                                                <subviews>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Сообщение ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-yc-7RI">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" systemColor="labelColor"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="4eg-yc-7RI" secondAttribute="trailing" id="4Tm-v2-jV8"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="4eg-yc-7RI" secondAttribute="bottom" id="fkN-Fo-2ZC"/>
+                                                                    <constraint firstItem="4eg-yc-7RI" firstAttribute="leading" secondItem="hI3-ja-GaV" secondAttribute="leading" id="lfh-X4-X0c"/>
+                                                                    <constraint firstItem="4eg-yc-7RI" firstAttribute="top" secondItem="hI3-ja-GaV" secondAttribute="top" id="pSv-MZ-wij"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpZ-MW-SLt">
+                                                        <rect key="frame" x="360" y="16" width="45" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="5G5-KS-XUR"/>
+                                                            <constraint firstAttribute="width" secondItem="NpZ-MW-SLt" secondAttribute="height" multiplier="1:1" id="pns-RP-JoQ"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                        <state key="normal" image="sendMessage"/>
+                                                        <connections>
+                                                            <action selector="sendMessageButtonWithButton:" destination="wLo-ec-AgB" eventType="touchUpInside" id="pgY-r0-d13"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="tabBarFon"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ezr-Hk-0gA" firstAttribute="leading" secondItem="i4S-VX-uBY" secondAttribute="leading" constant="9" id="5fR-Ts-O2A"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NpZ-MW-SLt" secondAttribute="trailing" constant="9" id="P2I-Pq-SVs"/>
+                                                    <constraint firstAttribute="height" constant="70" id="XED-00-fe5"/>
+                                                    <constraint firstItem="NpZ-MW-SLt" firstAttribute="leading" secondItem="rCh-9j-0GS" secondAttribute="trailing" constant="9" id="Zl1-om-Dkn"/>
+                                                    <constraint firstItem="rCh-9j-0GS" firstAttribute="leading" secondItem="Ezr-Hk-0gA" secondAttribute="trailing" constant="9" id="cGQ-Mb-CXB"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ezr-Hk-0gA" secondAttribute="bottom" constant="9" id="djD-KO-6xF"/>
+                                                    <constraint firstItem="rCh-9j-0GS" firstAttribute="top" secondItem="i4S-VX-uBY" secondAttribute="top" constant="20" id="jDX-GS-tbc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NpZ-MW-SLt" secondAttribute="bottom" constant="9" id="uYa-1u-1uN"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rCh-9j-0GS" secondAttribute="bottom" constant="15" id="y3l-0G-QDH"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="xNx-rg-KPT" firstAttribute="leading" secondItem="qhm-Mt-Eby" secondAttribute="leading" id="5Fh-ma-Zaz"/>
+                                            <constraint firstAttribute="trailing" secondItem="i4S-VX-uBY" secondAttribute="trailing" id="FRk-C1-Epc"/>
+                                            <constraint firstAttribute="trailing" secondItem="xNx-rg-KPT" secondAttribute="trailing" id="Yk8-Ft-Tn9"/>
+                                            <constraint firstItem="i4S-VX-uBY" firstAttribute="leading" secondItem="qhm-Mt-Eby" secondAttribute="leading" id="j8K-ZN-LpP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uul-4C-rpr" appends="YES" id="ohS-gg-0bf"/>
+                                        </connections>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fnX-Fg-1UK" secondAttribute="bottom" id="33U-Nq-oNt"/>
+                                    <constraint firstAttribute="trailing" secondItem="qhm-Mt-Eby" secondAttribute="trailing" id="LY2-kM-5HZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="fnX-Fg-1UK" secondAttribute="trailing" id="Q5y-CB-9p4"/>
+                                    <constraint firstAttribute="bottom" secondItem="qhm-Mt-Eby" secondAttribute="bottom" id="T4g-ej-6uE"/>
+                                    <constraint firstItem="fnX-Fg-1UK" firstAttribute="top" secondItem="7ft-U2-6aK" secondAttribute="top" id="UJ0-bv-Spr"/>
+                                    <constraint firstItem="qhm-Mt-Eby" firstAttribute="leading" secondItem="7ft-U2-6aK" secondAttribute="leading" id="aDX-zu-uOU"/>
+                                    <constraint firstItem="qhm-Mt-Eby" firstAttribute="top" secondItem="7ft-U2-6aK" secondAttribute="top" id="nK9-zH-ctx"/>
+                                    <constraint firstItem="fnX-Fg-1UK" firstAttribute="leading" secondItem="7ft-U2-6aK" secondAttribute="leading" id="y1y-fC-lNH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qaG-YY-Nl6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5kb-AQ-8Ry" firstAttribute="trailing" secondItem="qaG-YY-Nl6" secondAttribute="trailing" id="4uG-LY-eKf"/>
+                            <constraint firstItem="7ft-U2-6aK" firstAttribute="top" secondItem="5kb-AQ-8Ry" secondAttribute="bottom" id="LoE-Gb-leL"/>
+                            <constraint firstItem="5kb-AQ-8Ry" firstAttribute="leading" secondItem="qaG-YY-Nl6" secondAttribute="leading" id="M8U-3G-u6k"/>
+                            <constraint firstAttribute="trailing" secondItem="7ft-U2-6aK" secondAttribute="trailing" id="Vr7-bV-d3l"/>
+                            <constraint firstItem="7ft-U2-6aK" firstAttribute="leading" secondItem="Zje-CO-1iG" secondAttribute="leading" id="caT-he-tUr"/>
+                            <constraint firstItem="5kb-AQ-8Ry" firstAttribute="top" secondItem="qaG-YY-Nl6" secondAttribute="top" id="fux-H3-d7R"/>
+                            <constraint firstItem="5kb-AQ-8Ry" firstAttribute="top" secondItem="qaG-YY-Nl6" secondAttribute="top" id="io7-gy-VRE"/>
+                            <constraint firstItem="qaG-YY-Nl6" firstAttribute="bottom" secondItem="7ft-U2-6aK" secondAttribute="bottom" constant="25" id="jlG-GI-mg2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chatTable" destination="v9V-fQ-Rfw" id="XFZ-W6-exE"/>
+                        <outlet property="commonStackBottomConstant" destination="jlG-GI-mg2" id="4Rj-cY-B80"/>
+                        <outlet property="inputMessageView" destination="hI3-ja-GaV" id="1sy-XN-MVs"/>
+                        <outlet property="sendMessageHeightConstant" destination="XED-00-fe5" id="hM2-kL-TEW"/>
+                        <outlet property="sendMessageTextView" destination="4eg-yc-7RI" id="iSh-f4-m26"/>
+                        <outlet property="sendMessageView" destination="i4S-VX-uBY" id="LZ3-7l-qRR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tea-gF-GU9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="v9V-fQ-Rfw" customClass="ChatTable" customModule="ChurchApp" customModuleProvider="target"/>
+                <tapGestureRecognizer id="uul-4C-rpr">
+                    <connections>
+                        <action selector="tapTableGestureWithButton:" destination="wLo-ec-AgB" id="Ql2-fp-voJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundStart" width="375" height="812"/>
+        <image name="sendFileMessage" width="24" height="22"/>
+        <image name="sendMessage" width="192" height="192"/>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

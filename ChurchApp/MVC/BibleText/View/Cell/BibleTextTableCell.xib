@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oGl-Tz-Qwb" customClass="BibleTextTableCell" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGl-Tz-Qwb" id="BOa-mI-uOM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-sf-Gf3" userLabel="CommonView">
+                        <rect key="frame" x="0.0" y="7" width="414" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DD-Xj-ztL">
+                                <rect key="frame" x="5" y="0.0" width="10" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="5GI-X8-oOs"/>
+                                    <constraint firstAttribute="height" constant="20" id="dbW-Wq-Cp5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-8d-CMm" userLabel="CommonStackView">
+                                <rect key="frame" x="25" y="0.0" width="364" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iue-QU-Eh8">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dAV-8d-CMm" firstAttribute="top" secondItem="fhA-sf-Gf3" secondAttribute="top" id="FXo-xt-250"/>
+                            <constraint firstAttribute="bottom" secondItem="dAV-8d-CMm" secondAttribute="bottom" id="GMd-Fv-oFz"/>
+                            <constraint firstAttribute="trailing" secondItem="dAV-8d-CMm" secondAttribute="trailing" constant="25" id="HdV-vx-3Xx"/>
+                            <constraint firstItem="dAV-8d-CMm" firstAttribute="leading" secondItem="0DD-Xj-ztL" secondAttribute="trailing" constant="10" id="KT2-tk-dEl"/>
+                            <constraint firstItem="0DD-Xj-ztL" firstAttribute="top" secondItem="fhA-sf-Gf3" secondAttribute="top" id="OFr-RC-eqs"/>
+                            <constraint firstItem="0DD-Xj-ztL" firstAttribute="leading" secondItem="fhA-sf-Gf3" secondAttribute="leading" constant="5" id="fCz-ix-WET"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fhA-sf-Gf3" secondAttribute="trailing" id="DGa-og-Ogm"/>
+                    <constraint firstItem="fhA-sf-Gf3" firstAttribute="leading" secondItem="BOa-mI-uOM" secondAttribute="leading" id="FRj-Jj-61N"/>
+                    <constraint firstAttribute="bottom" secondItem="fhA-sf-Gf3" secondAttribute="bottom" constant="7" id="rkf-0u-MiY"/>
+                    <constraint firstItem="fhA-sf-Gf3" firstAttribute="top" secondItem="BOa-mI-uOM" secondAttribute="top" constant="7" id="ycN-ZS-1bG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="Iue-QU-Eh8" id="rvg-wr-wT7"/>
+            </connections>
+            <point key="canvasLocation" x="222" y="11"/>
+        </tableViewCell>
+    </objects>
+</document>

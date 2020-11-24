@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xf8-0l-nRV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Web Content View Controller-->
+        <scene sceneID="PlM-kI-PjD">
+            <objects>
+                <viewController storyboardIdentifier="WebContentViewController" id="Xf8-0l-nRV" customClass="WebContentViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x1o-dl-JLy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4E-JB-BfH" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-4C-boh">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="s0T-4C-boh" secondAttribute="height" multiplier="1:1" id="N4A-61-skC"/>
+                                        </constraints>
+                                        <color key="tintColor" name="tabBarFon"/>
+                                        <state key="normal" image="exit"/>
+                                        <connections>
+                                            <action selector="backButtonWithButton:" destination="Xf8-0l-nRV" eventType="touchUpInside" id="Rzi-Gw-vCo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PP-gY-iQC">
+                                        <rect key="frame" x="60" y="0.0" width="294" height="60"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="navBarFon"/>
+                                <constraints>
+                                    <constraint firstItem="7PP-gY-iQC" firstAttribute="leading" secondItem="s0T-4C-boh" secondAttribute="trailing" id="3XB-Uw-pHh"/>
+                                    <constraint firstItem="s0T-4C-boh" firstAttribute="top" secondItem="l4E-JB-BfH" secondAttribute="top" id="7xA-n7-QLH"/>
+                                    <constraint firstAttribute="bottom" secondItem="7PP-gY-iQC" secondAttribute="bottom" id="875-TA-h2c"/>
+                                    <constraint firstItem="7PP-gY-iQC" firstAttribute="top" secondItem="l4E-JB-BfH" secondAttribute="top" id="8du-YE-Ysn"/>
+                                    <constraint firstAttribute="height" constant="60" id="BNm-Ne-23d"/>
+                                    <constraint firstAttribute="trailing" secondItem="7PP-gY-iQC" secondAttribute="trailing" constant="60" id="bFE-cD-h2C"/>
+                                    <constraint firstAttribute="bottom" secondItem="s0T-4C-boh" secondAttribute="bottom" id="i4U-Zp-sod"/>
+                                    <constraint firstItem="s0T-4C-boh" firstAttribute="leading" secondItem="l4E-JB-BfH" secondAttribute="leading" id="rZi-KA-8UW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrE-TE-aL1" userLabel="SafeAreaView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" name="navBarFon"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-C2-22H" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIO-rl-Lyg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="FIO-rl-Lyg" firstAttribute="top" secondItem="ElB-C2-22H" secondAttribute="top" id="0i2-zG-0vX"/>
+                                    <constraint firstAttribute="trailing" secondItem="FIO-rl-Lyg" secondAttribute="trailing" id="MBx-dK-Fwi"/>
+                                    <constraint firstAttribute="bottom" secondItem="FIO-rl-Lyg" secondAttribute="bottom" id="fiJ-6f-RQF"/>
+                                    <constraint firstItem="FIO-rl-Lyg" firstAttribute="leading" secondItem="ElB-C2-22H" secondAttribute="leading" id="qoq-4q-zAX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="l4E-JB-BfH" firstAttribute="top" secondItem="Kii-0X-TWj" secondAttribute="top" id="8qA-wL-qIC"/>
+                            <constraint firstItem="YrE-TE-aL1" firstAttribute="leading" secondItem="x1o-dl-JLy" secondAttribute="leading" id="GXm-ch-W6l"/>
+                            <constraint firstItem="Kii-0X-TWj" firstAttribute="bottom" secondItem="ElB-C2-22H" secondAttribute="bottom" id="MIK-Bo-Yeh"/>
+                            <constraint firstItem="YrE-TE-aL1" firstAttribute="top" secondItem="x1o-dl-JLy" secondAttribute="top" id="TRs-ij-8ei"/>
+                            <constraint firstItem="l4E-JB-BfH" firstAttribute="leading" secondItem="x1o-dl-JLy" secondAttribute="leading" id="dol-76-fWX"/>
+                            <constraint firstItem="l4E-JB-BfH" firstAttribute="top" secondItem="YrE-TE-aL1" secondAttribute="bottom" id="kDc-9s-tTA"/>
+                            <constraint firstItem="ElB-C2-22H" firstAttribute="leading" secondItem="x1o-dl-JLy" secondAttribute="leading" id="nO8-dV-040"/>
+                            <constraint firstItem="ElB-C2-22H" firstAttribute="top" secondItem="l4E-JB-BfH" secondAttribute="bottom" id="rtO-RX-re1"/>
+                            <constraint firstAttribute="trailing" secondItem="ElB-C2-22H" secondAttribute="trailing" id="tDr-Hd-4Bo"/>
+                            <constraint firstAttribute="trailing" secondItem="YrE-TE-aL1" secondAttribute="trailing" id="tUA-b0-XsN"/>
+                            <constraint firstAttribute="trailing" secondItem="l4E-JB-BfH" secondAttribute="trailing" id="wwg-kD-wxs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kii-0X-TWj"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="FIO-rl-Lyg" id="CGK-Db-jel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1k-wl-50i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="210"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exit" width="30" height="30"/>
+        <namedColor name="navBarFon">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9vx-OM-PDt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Full Photo View Controller-->
+        <scene sceneID="Y4h-Uu-XFp">
+            <objects>
+                <viewController storyboardIdentifier="FullPhotoViewController" id="9vx-OM-PDt" customClass="FullPhotoViewController" customModule="DgBetTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWf-k8-atr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dL1-j9-BbM" userLabel="FullPhotoView">
+                                <rect key="frame" x="1" y="44" width="412" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p20-9g-vwd">
+                                        <rect key="frame" x="0.0" y="0.0" width="412" height="818"/>
+                                        <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="zPosition">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cVi-dN-VAg" appends="YES" id="BOY-D0-9cu"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="p20-9g-vwd" firstAttribute="leading" secondItem="dL1-j9-BbM" secondAttribute="leading" id="0kP-Wc-ZzN"/>
+                                    <constraint firstAttribute="bottom" secondItem="p20-9g-vwd" secondAttribute="bottom" id="2uh-CX-5vJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="p20-9g-vwd" secondAttribute="trailing" id="GmM-hi-Ulk"/>
+                                    <constraint firstItem="p20-9g-vwd" firstAttribute="top" secondItem="dL1-j9-BbM" secondAttribute="top" id="MS3-nY-8VD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dL1-j9-BbM" firstAttribute="top" secondItem="EMJ-lq-kFC" secondAttribute="top" id="DCY-Tl-hDs"/>
+                            <constraint firstItem="EMJ-lq-kFC" firstAttribute="trailing" secondItem="dL1-j9-BbM" secondAttribute="trailing" constant="1" id="bVq-0O-0Xo"/>
+                            <constraint firstItem="dL1-j9-BbM" firstAttribute="leading" secondItem="EMJ-lq-kFC" secondAttribute="leading" constant="1" id="cuq-fH-CeR"/>
+                            <constraint firstItem="EMJ-lq-kFC" firstAttribute="bottom" secondItem="dL1-j9-BbM" secondAttribute="bottom" id="rK2-lp-P6t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EMJ-lq-kFC"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="fullImageView" destination="p20-9g-vwd" id="BbX-JG-QX2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTf-W8-BkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cVi-dN-VAg">
+                    <connections>
+                        <action selector="backPanGestures:" destination="9vx-OM-PDt" id="r2s-Tp-bcG"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="32" y="177"/>
+        </scene>
+    </scenes>
+</document>

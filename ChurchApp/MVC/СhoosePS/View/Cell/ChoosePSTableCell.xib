@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="53" id="oGl-Tz-Qwb" customClass="ChoosePSTableCell" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="53"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGl-Tz-Qwb" id="BOa-mI-uOM">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ttg-IM-dR2" userLabel="CommonView">
+                        <rect key="frame" x="0.0" y="0.0" width="421" height="53"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-nB-yhn" userLabel="CommonStackView">
+                                <rect key="frame" x="0.0" y="0.0" width="421" height="53"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0i-zh-Gcb" userLabel="ChekmarkView">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2N-4h-y6T">
+                                                <rect key="frame" x="15" y="15" width="23" height="23"/>
+                                                <color key="backgroundColor" name="buttonYellow"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="m2N-4h-y6T" secondAttribute="height" multiplier="1:1" id="10z-jc-Qeb"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="5" minY="7" maxX="5" maxY="7"/>
+                                                <state key="normal" image="checkMakeDonation"/>
+                                                <connections>
+                                                    <action selector="checkmarkButtonWithButton:" destination="oGl-Tz-Qwb" eventType="touchUpInside" id="qgm-qZ-66c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="m2N-4h-y6T" firstAttribute="leading" secondItem="i0i-zh-Gcb" secondAttribute="leading" constant="15" id="DPp-tq-PNT"/>
+                                            <constraint firstItem="m2N-4h-y6T" firstAttribute="top" secondItem="i0i-zh-Gcb" secondAttribute="top" constant="15" id="HXf-Eo-sAb"/>
+                                            <constraint firstAttribute="width" secondItem="i0i-zh-Gcb" secondAttribute="height" multiplier="1:1" id="JMc-kc-QcZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="m2N-4h-y6T" secondAttribute="trailing" constant="15" id="Lzy-lO-B25"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-6B-QsE" userLabel="NameView">
+                                        <rect key="frame" x="53" y="0.0" width="368" height="53"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dss-Xu-Vc5">
+                                                <rect key="frame" x="10" y="0.0" width="348" height="53"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="dss-Xu-Vc5" firstAttribute="top" secondItem="EqD-6B-QsE" secondAttribute="top" id="RYS-7n-GPa"/>
+                                            <constraint firstAttribute="bottom" secondItem="dss-Xu-Vc5" secondAttribute="bottom" id="SLZ-4i-Ji0"/>
+                                            <constraint firstItem="dss-Xu-Vc5" firstAttribute="leading" secondItem="EqD-6B-QsE" secondAttribute="leading" constant="10" id="U7c-Fy-uBf"/>
+                                            <constraint firstAttribute="trailing" secondItem="dss-Xu-Vc5" secondAttribute="trailing" constant="10" id="lpO-gx-oGe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Eja-nB-yhn" secondAttribute="bottom" id="cfc-Yp-XPQ"/>
+                            <constraint firstItem="Eja-nB-yhn" firstAttribute="top" secondItem="Ttg-IM-dR2" secondAttribute="top" id="kVI-u9-bRn"/>
+                            <constraint firstAttribute="trailing" secondItem="Eja-nB-yhn" secondAttribute="trailing" id="pB2-t5-20y"/>
+                            <constraint firstItem="Eja-nB-yhn" firstAttribute="leading" secondItem="Ttg-IM-dR2" secondAttribute="leading" id="vmj-HR-MD9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ttg-IM-dR2" firstAttribute="top" secondItem="BOa-mI-uOM" secondAttribute="top" id="RIj-AI-3Rh"/>
+                    <constraint firstItem="Ttg-IM-dR2" firstAttribute="leading" secondItem="BOa-mI-uOM" secondAttribute="leading" id="fct-wf-KOp"/>
+                    <constraint firstAttribute="trailing" secondItem="Ttg-IM-dR2" secondAttribute="trailing" id="frF-g2-9NZ"/>
+                    <constraint firstAttribute="bottom" secondItem="Ttg-IM-dR2" secondAttribute="bottom" id="ja4-bg-bGD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkmarkButton" destination="m2N-4h-y6T" id="Pw0-xV-jQa"/>
+                <outlet property="nameLabel" destination="dss-Xu-Vc5" id="aY8-9i-vpW"/>
+            </connections>
+            <point key="canvasLocation" x="226.81159420289856" y="13.727678571428571"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkMakeDonation" width="24" height="18"/>
+        <namedColor name="buttonYellow">
+            <color red="0.94900000095367432" green="0.75700002908706665" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

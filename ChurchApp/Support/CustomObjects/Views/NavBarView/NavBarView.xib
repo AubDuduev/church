@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NavBarView" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="59"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-3b-S1t" userLabel="AvatarView">
+                    <rect key="frame" x="12" y="7" width="45" height="45"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userChurcheApp" translatesAutoresizingMaskIntoConstraints="NO" id="9kL-Io-KVT">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-OJ-x6H">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                            <connections>
+                                <action selector="presentProfileVCButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="spC-QF-pji"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="xvV-OJ-x6H" firstAttribute="top" secondItem="vF5-3b-S1t" secondAttribute="top" id="00s-pC-T5P"/>
+                        <constraint firstItem="xvV-OJ-x6H" firstAttribute="leading" secondItem="vF5-3b-S1t" secondAttribute="leading" id="013-Ej-yZ9"/>
+                        <constraint firstItem="9kL-Io-KVT" firstAttribute="leading" secondItem="vF5-3b-S1t" secondAttribute="leading" id="23h-NQ-wZ1"/>
+                        <constraint firstAttribute="width" constant="45" id="6Xu-CL-IwQ"/>
+                        <constraint firstAttribute="bottom" secondItem="xvV-OJ-x6H" secondAttribute="bottom" id="Ci6-kW-Ll9"/>
+                        <constraint firstAttribute="trailing" secondItem="xvV-OJ-x6H" secondAttribute="trailing" id="MJc-0K-eN1"/>
+                        <constraint firstAttribute="height" constant="45" id="OHt-fq-cu5"/>
+                        <constraint firstAttribute="bottom" secondItem="9kL-Io-KVT" secondAttribute="bottom" id="QG5-dv-XhR"/>
+                        <constraint firstAttribute="trailing" secondItem="9kL-Io-KVT" secondAttribute="trailing" id="Wng-tg-Sk5"/>
+                        <constraint firstItem="9kL-Io-KVT" firstAttribute="top" secondItem="vF5-3b-S1t" secondAttribute="top" id="lPO-Dm-iyh"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Лента новостей" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIz-Cj-oXU">
+                    <rect key="frame" x="66" y="0.0" width="323" height="59"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="24"/>
+                    <color key="textColor" name="tabBarFon"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="navBarFon"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="jIz-Cj-oXU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OkK-Wi-Ea5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jIz-Cj-oXU" secondAttribute="trailing" constant="66" id="SVE-RT-m4z"/>
+                <constraint firstAttribute="bottom" secondItem="jIz-Cj-oXU" secondAttribute="bottom" id="agQ-tP-Crh"/>
+                <constraint firstItem="jIz-Cj-oXU" firstAttribute="leading" secondItem="vF5-3b-S1t" secondAttribute="trailing" constant="9" id="m5O-rx-dPU"/>
+                <constraint firstItem="vF5-3b-S1t" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-7" id="uR8-yV-qzy"/>
+                <constraint firstItem="vF5-3b-S1t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="vTn-P0-uyS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatarImageView" destination="9kL-Io-KVT" id="kFc-1p-5Ky"/>
+                <outlet property="titleNavBarLabel" destination="jIz-Cj-oXU" id="68T-i4-stb"/>
+            </connections>
+            <point key="canvasLocation" x="167.39130434782609" y="-148.99553571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="userChurcheApp" width="45" height="45"/>
+        <namedColor name="navBarFon">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

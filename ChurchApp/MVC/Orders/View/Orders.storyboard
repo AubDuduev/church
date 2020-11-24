@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YBc-bR-WSz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Orders View Controller-->
+        <scene sceneID="1fm-TW-0dH">
+            <objects>
+                <viewController storyboardIdentifier="OrdersViewController" id="YBc-bR-WSz" customClass="OrdersViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpR-8M-EqN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vH-dD-wJl" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hLd-c1-8aw" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-iN-RAv" userLabel="TopClouseView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouseOrder" translatesAutoresizingMaskIntoConstraints="NO" id="ZKq-Iu-AMu">
+                                                        <rect key="frame" x="145" y="0.0" width="124" height="38"/>
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiP-jm-Njh">
+                                                        <rect key="frame" x="192" y="0.0" width="30" height="38"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="ZKq-Iu-AMu" firstAttribute="centerX" secondItem="1Ck-iN-RAv" secondAttribute="centerX" id="2xu-SK-oju"/>
+                                                    <constraint firstAttribute="height" constant="38" id="GAV-bA-obj"/>
+                                                    <constraint firstItem="iiP-jm-Njh" firstAttribute="centerX" secondItem="1Ck-iN-RAv" secondAttribute="centerX" id="YqG-DJ-6tR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iiP-jm-Njh" secondAttribute="bottom" id="auS-Io-a0a"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZKq-Iu-AMu" secondAttribute="bottom" id="rMw-2u-3ka"/>
+                                                    <constraint firstItem="ZKq-Iu-AMu" firstAttribute="top" secondItem="1Ck-iN-RAv" secondAttribute="top" id="rvt-kn-KBh"/>
+                                                    <constraint firstItem="iiP-jm-Njh" firstAttribute="top" secondItem="1Ck-iN-RAv" secondAttribute="top" id="uvR-Dg-tTe"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-m5-6ws" userLabel="TitleView">
+                                                <rect key="frame" x="0.0" y="38" width="414" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мои заказы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cd1-QW-UQE">
+                                                        <rect key="frame" x="145.5" y="0.0" width="123.5" height="50"/>
+                                                        <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="21"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Cd1-QW-UQE" firstAttribute="top" secondItem="L8w-m5-6ws" secondAttribute="top" id="7Ld-kY-6GJ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Ir6-CT-zr5"/>
+                                                    <constraint firstItem="Cd1-QW-UQE" firstAttribute="centerX" secondItem="L8w-m5-6ws" secondAttribute="centerX" id="cfn-Tf-ZzH"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Cd1-QW-UQE" secondAttribute="bottom" id="iTd-1J-WnQ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlN-RA-lEU" userLabel="TableViewView">
+                                                <rect key="frame" x="0.0" y="88" width="414" height="764"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XLR-hg-oXX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="Qzb-nl-huj" id="gxP-xB-9d1"/>
+                                                            <outlet property="delegate" destination="Qzb-nl-huj" id="h6M-sJ-LGG"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="XLR-hg-oXX" firstAttribute="leading" secondItem="AlN-RA-lEU" secondAttribute="leading" id="7Ss-5C-RAV"/>
+                                                    <constraint firstItem="XLR-hg-oXX" firstAttribute="top" secondItem="AlN-RA-lEU" secondAttribute="top" id="C5x-VM-mXT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XLR-hg-oXX" secondAttribute="trailing" id="UEa-IL-UQ1"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XLR-hg-oXX" secondAttribute="bottom" id="t14-eV-qnz"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hLd-c1-8aw" secondAttribute="bottom" id="Rkv-5n-OpE"/>
+                                    <constraint firstItem="hLd-c1-8aw" firstAttribute="top" secondItem="8vH-dD-wJl" secondAttribute="top" id="c3l-6i-p2j"/>
+                                    <constraint firstItem="hLd-c1-8aw" firstAttribute="leading" secondItem="8vH-dD-wJl" secondAttribute="leading" id="o0T-Cy-6bu"/>
+                                    <constraint firstAttribute="trailing" secondItem="hLd-c1-8aw" secondAttribute="trailing" id="uvg-RC-P8G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p48-tJ-JcE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8vH-dD-wJl" firstAttribute="top" secondItem="p48-tJ-JcE" secondAttribute="top" id="4Fi-Th-XtC"/>
+                            <constraint firstAttribute="bottom" secondItem="8vH-dD-wJl" secondAttribute="bottom" id="Gfs-9J-Ln5"/>
+                            <constraint firstItem="8vH-dD-wJl" firstAttribute="leading" secondItem="dpR-8M-EqN" secondAttribute="leading" id="MWP-jp-pOG"/>
+                            <constraint firstAttribute="trailing" secondItem="8vH-dD-wJl" secondAttribute="trailing" id="w23-4A-EoX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ordersTable" destination="Qzb-nl-huj" id="RSu-JX-qiu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooa-Dt-hdA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Qzb-nl-huj" customClass="OrdersTable" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clouseOrder" width="124" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

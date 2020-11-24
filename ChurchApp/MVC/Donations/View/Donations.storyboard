@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RdA-5l-R6k">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Donations View Controller-->
+        <scene sceneID="Qjj-fM-pIy">
+            <objects>
+                <viewController storyboardIdentifier="DonationsViewController" id="RdA-5l-R6k" customClass="DonationsViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zlK-TF-ksQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundRegistration" translatesAutoresizingMaskIntoConstraints="NO" id="Bk2-b3-Zdx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBT-g3-FaQ" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0K3-3l-XJ7" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="792"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZL5-Uh-oPC" userLabel="DonationsDateView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожертвований в сентябре:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="t7y-qg-pS7">
+                                                        <rect key="frame" x="0.0" y="21" width="414" height="32"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="53" id="UfY-Db-k9g"/>
+                                                    <constraint firstAttribute="bottom" secondItem="t7y-qg-pS7" secondAttribute="bottom" id="ZMu-Eh-qJ3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="t7y-qg-pS7" secondAttribute="trailing" id="azs-ZH-lrV"/>
+                                                    <constraint firstItem="t7y-qg-pS7" firstAttribute="leading" secondItem="ZL5-Uh-oPC" secondAttribute="leading" id="f5R-ip-1NQ"/>
+                                                    <constraint firstItem="t7y-qg-pS7" firstAttribute="top" secondItem="ZL5-Uh-oPC" secondAttribute="top" constant="21" id="jit-WF-ERs"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOP-rg-1W3" userLabel="ResultSummView">
+                                                <rect key="frame" x="0.0" y="53" width="414" height="79"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 217 543 ₽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="P9x-64-0YY">
+                                                        <rect key="frame" x="0.0" y="6" width="414" height="59"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="52"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="P9x-64-0YY" firstAttribute="top" secondItem="iOP-rg-1W3" secondAttribute="top" constant="6" id="76q-ka-VtJ"/>
+                                                    <constraint firstAttribute="height" constant="79" id="RQm-yQ-Ye3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="P9x-64-0YY" secondAttribute="bottom" constant="14" id="YLV-rR-VqN"/>
+                                                    <constraint firstAttribute="trailing" secondItem="P9x-64-0YY" secondAttribute="trailing" id="pOb-hr-cdO"/>
+                                                    <constraint firstItem="P9x-64-0YY" firstAttribute="leading" secondItem="iOP-rg-1W3" secondAttribute="leading" id="yQa-6c-nwz"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6S-UY-HyK" userLabel="BorderView">
+                                                <rect key="frame" x="0.0" y="132" width="414" height="1"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhL-E5-Rar">
+                                                        <rect key="frame" x="40" y="0.0" width="334" height="1"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="nhL-E5-Rar" firstAttribute="top" secondItem="A6S-UY-HyK" secondAttribute="top" id="8xN-ch-3gI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nhL-E5-Rar" secondAttribute="bottom" id="EK9-VM-B3T"/>
+                                                    <constraint firstAttribute="height" constant="1" id="Tqi-YR-G5o"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nhL-E5-Rar" secondAttribute="trailing" constant="40" id="dJU-Pu-Nty"/>
+                                                    <constraint firstItem="nhL-E5-Rar" firstAttribute="leading" secondItem="A6S-UY-HyK" secondAttribute="leading" constant="40" id="nzb-k8-ZRK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuC-0Z-tpF" userLabel="ResultProcentSummView">
+                                                <rect key="frame" x="0.0" y="133" width="414" height="58"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Уже собрали 75% суммы на" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="itz-gQ-iMx">
+                                                        <rect key="frame" x="40" y="22" width="334" height="26"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="itz-gQ-iMx" secondAttribute="bottom" constant="10" id="2yY-WU-Fbc"/>
+                                                    <constraint firstItem="itz-gQ-iMx" firstAttribute="leading" secondItem="GuC-0Z-tpF" secondAttribute="leading" constant="40" id="bmy-lH-fMZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="itz-gQ-iMx" secondAttribute="trailing" constant="40" id="c1T-Ko-inq"/>
+                                                    <constraint firstAttribute="height" constant="58" id="i9f-Oz-ePe"/>
+                                                    <constraint firstItem="itz-gQ-iMx" firstAttribute="top" secondItem="GuC-0Z-tpF" secondAttribute="top" constant="22" id="jqo-Dn-xJU"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-zD-foz" userLabel="ChartSborView">
+                                                <rect key="frame" x="0.0" y="191" width="414" height="232"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpg-Zm-8sQ" userLabel="FonChartView">
+                                                        <rect key="frame" x="104.5" y="10" width="205" height="205"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nls-kc-kOS">
+                                                                <rect key="frame" x="20" y="20" width="165" height="165"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="architectureDonationspdf" translatesAutoresizingMaskIntoConstraints="NO" id="qCg-yp-2bf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="165" height="82.5"/>
+                                                                        <color key="tintColor" name="tabBarFon"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="строительство храма" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYV-3Z-xCI">
+                                                                        <rect key="frame" x="0.0" y="82.5" width="165" height="82.5"/>
+                                                                        <color key="tintColor" name="tabBarFon"/>
+                                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Nls-kc-kOS" secondAttribute="bottom" constant="20" id="BPm-3t-znw"/>
+                                                            <constraint firstItem="Nls-kc-kOS" firstAttribute="top" secondItem="Gpg-Zm-8sQ" secondAttribute="top" constant="20" id="DfF-zi-0lL"/>
+                                                            <constraint firstItem="Nls-kc-kOS" firstAttribute="leading" secondItem="Gpg-Zm-8sQ" secondAttribute="leading" constant="20" id="RG9-41-xeU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Nls-kc-kOS" secondAttribute="trailing" constant="20" id="VAS-OP-wzP"/>
+                                                            <constraint firstAttribute="width" secondItem="Gpg-Zm-8sQ" secondAttribute="height" id="r1i-79-3Vd"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Gpg-Zm-8sQ" secondAttribute="bottom" constant="17" id="M5t-e6-ahG"/>
+                                                    <constraint firstAttribute="height" constant="232" id="d1A-xl-VeV"/>
+                                                    <constraint firstItem="Gpg-Zm-8sQ" firstAttribute="centerX" secondItem="6Ra-zD-foz" secondAttribute="centerX" id="g9T-cE-KEP"/>
+                                                    <constraint firstItem="Gpg-Zm-8sQ" firstAttribute="top" secondItem="6Ra-zD-foz" secondAttribute="top" constant="10" id="sm3-QS-K1W"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sem-Lm-4p3" userLabel="DonationsButtonView">
+                                                <rect key="frame" x="0.0" y="423" width="414" height="85"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-lS-2UC">
+                                                        <rect key="frame" x="15" y="17" width="384" height="51"/>
+                                                        <color key="backgroundColor" name="buttonBukeryCell"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Сделать пожертвование"/>
+                                                        <connections>
+                                                            <action selector="makeDonationButtonWithButton:" destination="RdA-5l-R6k" eventType="touchUpInside" id="4kX-dz-9Et"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="cW2-lS-2UC" firstAttribute="leading" secondItem="Sem-Lm-4p3" secondAttribute="leading" constant="15" id="6Nh-ir-R8j"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cW2-lS-2UC" secondAttribute="bottom" constant="17" id="Nds-GM-nMy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cW2-lS-2UC" secondAttribute="trailing" constant="15" id="oBz-CJ-P6D"/>
+                                                    <constraint firstAttribute="height" constant="85" id="p2Z-0V-cMD"/>
+                                                    <constraint firstItem="cW2-lS-2UC" firstAttribute="top" secondItem="Sem-Lm-4p3" secondAttribute="top" constant="17" id="wAM-Oo-GNU"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iI6-hD-cYX">
+                                                <rect key="frame" x="0.0" y="508" width="414" height="284"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0K3-3l-XJ7" secondAttribute="trailing" id="7IO-0B-nwc"/>
+                                    <constraint firstItem="0K3-3l-XJ7" firstAttribute="top" secondItem="cBT-g3-FaQ" secondAttribute="top" id="VKW-mh-ZvE"/>
+                                    <constraint firstAttribute="bottom" secondItem="0K3-3l-XJ7" secondAttribute="bottom" id="dge-sy-KVb"/>
+                                    <constraint firstItem="0K3-3l-XJ7" firstAttribute="leading" secondItem="cBT-g3-FaQ" secondAttribute="leading" id="uI4-cX-iFo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEL-uv-fmU" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qG-sB-POt">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8qG-sB-POt" secondAttribute="height" multiplier="1:1" id="4qU-aj-mXq"/>
+                                        </constraints>
+                                        <color key="tintColor" name="tabBarFon"/>
+                                        <state key="normal" image="exit"/>
+                                        <connections>
+                                            <action selector="backButtonWithButton:" destination="RdA-5l-R6k" eventType="touchUpInside" id="RLU-eO-hWs"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожертвовать на храм" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-EO-bUL">
+                                        <rect key="frame" x="60" y="0.0" width="294" height="60"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="navBarFon"/>
+                                <constraints>
+                                    <constraint firstItem="FSe-EO-bUL" firstAttribute="leading" secondItem="8qG-sB-POt" secondAttribute="trailing" id="8MB-3P-lbN"/>
+                                    <constraint firstItem="8qG-sB-POt" firstAttribute="top" secondItem="XEL-uv-fmU" secondAttribute="top" id="Kh2-xb-YPA"/>
+                                    <constraint firstItem="8qG-sB-POt" firstAttribute="leading" secondItem="XEL-uv-fmU" secondAttribute="leading" id="M5d-8i-Q4Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="8qG-sB-POt" secondAttribute="bottom" id="du9-2W-JO6"/>
+                                    <constraint firstAttribute="height" constant="60" id="jYu-Wu-OQ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="FSe-EO-bUL" secondAttribute="trailing" constant="60" id="kfq-cP-GhK"/>
+                                    <constraint firstItem="FSe-EO-bUL" firstAttribute="top" secondItem="XEL-uv-fmU" secondAttribute="top" id="vv0-tu-uyZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FSe-EO-bUL" secondAttribute="bottom" id="zhS-Ie-dn6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-z6-voF" userLabel="SafeAreaView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" name="navBarFon"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CS-tL-m4P" userLabel="DonationsDescriptionView">
+                                <rect key="frame" x="20" y="631" width="374" height="750"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TuS-xb-9ZZ">
+                                        <rect key="frame" x="15" y="20" width="344" height="705"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kf-Je-9fT" userLabel="LineView">
+                                                <rect key="frame" x="0.0" y="0.0" width="344" height="2"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-s7-eaO">
+                                                        <rect key="frame" x="147" y="0.0" width="50" height="2"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="maY-Wj-WF0"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="h8M-s7-eaO" secondAttribute="bottom" id="5rd-MF-WDx"/>
+                                                    <constraint firstItem="h8M-s7-eaO" firstAttribute="top" secondItem="5kf-Je-9fT" secondAttribute="top" id="Lbi-QS-nCG"/>
+                                                    <constraint firstItem="h8M-s7-eaO" firstAttribute="centerX" secondItem="5kf-Je-9fT" secondAttribute="centerX" id="Meh-VD-GHG"/>
+                                                    <constraint firstAttribute="height" constant="2" id="QFF-Qw-7S5"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На что идут пожертвования" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il3-wh-INO">
+                                                <rect key="frame" x="0.0" y="2" width="344" height="50"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="jx8-9s-Dq5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="hG3-4T-Hba" appends="YES" id="552-tn-kgn"/>
+                                                </connections>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJS-9N-LmD">
+                                                <rect key="frame" x="0.0" y="52" width="344" height="653"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <gestureRecognizers/>
+                                                <string key="text"> Храм Свт. Николая в Подкопаях, в Подкопаеве, или просто Николай Подкопай – один из многочисленных храмов Первопрестольной, посвященных Николаю Угоднику. Каких только нет среди них: и Николы в Пыжах, и в Звонарях, и на Болвановке. Когда-то был даже Никола на Курьих ножках. Однако наш Подкопаевский нам особенно близок и дорог. Расположенный поблизости от современной станции метро «Китай-город», он невелик, но уютен. В нем три престола: Казанской Божьей Матери, Святителя Николая Чудотворца и преподобного Сергия Радонежского. Жизнь храма можно уподобить горящей свече. Наша подкопаевская свеча загорелась в Белом городе, за Китайгородской стеной, почти шесть веков назад. В исторических источниках Никольский храм близ великокняжеской резиденции у основания Ивановской горки, упоминается, начиная с конца ХУ в. А переулок, в котором стоял храм, одно время так и назывался – Никольский. С течением времени внешний вид храма изменялся. В 1700 г. возвели уникальное изящное шестигранное завершение, которое и сейчас очень украшает храм. Спустя полвека на средства прихожан была построена колокольня, а при ней отдельно стоящая кладовая палата. Входили тогда в храм не так, как сейчас, со стороны Подкопаевского переулка – главный вход был южным и располагался в Подколокольном переулке. А названия-то какие чудесные: Подколокольный – значит явно под колоколами, к церковному звону прислушивается, а Подкопаевский почему – неизвестно. Только догадки всякие существуют. Одни связывают его с фамилией владельца соседнего двора, другие с глиняным карьером, а третьи – ни с чем иным, как с подкопом. Как бы то ни было, название закрепилось прочно, и не только за переулком. Подкопаевцами называют себя и постоянные прихожане храма, и бойцы военно-патриотической дружины, вот уже почти девять лет существующей при храме. Подкопаевцам хорошо известны связанные с этим названием легенды. Одна из них так и называется Николай-Подкопай. Это очень необычная история. </string>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="XfP-Jf-tbr" appends="YES" id="EJr-fv-H13"/>
+                                                </connections>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TuS-xb-9ZZ" secondAttribute="bottom" constant="25" id="4Dh-lJ-Aie"/>
+                                    <constraint firstAttribute="trailing" secondItem="TuS-xb-9ZZ" secondAttribute="trailing" constant="15" id="FQl-47-mab"/>
+                                    <constraint firstItem="TuS-xb-9ZZ" firstAttribute="leading" secondItem="6CS-tL-m4P" secondAttribute="leading" constant="15" id="GTB-q9-dCa"/>
+                                    <constraint firstItem="TuS-xb-9ZZ" firstAttribute="top" secondItem="6CS-tL-m4P" secondAttribute="top" constant="20" id="Seq-WI-Obn"/>
+                                    <constraint firstAttribute="height" constant="750" id="tli-4Q-IS6"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Pzh-z4-TeC" appends="YES" id="90H-gm-j4N"/>
+                                    <outletCollection property="gestureRecognizers" destination="e49-vK-sLm" appends="YES" id="G6s-sv-Dzp"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZEz-EC-yaJ" appends="YES" id="cJv-xz-9PJ"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6CS-tL-m4P" firstAttribute="top" secondItem="cW2-lS-2UC" secondAttribute="bottom" constant="36" id="4jV-S6-CQS"/>
+                            <constraint firstAttribute="trailing" secondItem="XEL-uv-fmU" secondAttribute="trailing" id="7aL-ch-jQk"/>
+                            <constraint firstItem="XEL-uv-fmU" firstAttribute="leading" secondItem="zlK-TF-ksQ" secondAttribute="leading" id="DLt-Lx-tct"/>
+                            <constraint firstAttribute="trailing" secondItem="uB2-z6-voF" secondAttribute="trailing" id="GL7-iP-n2R"/>
+                            <constraint firstItem="6CS-tL-m4P" firstAttribute="leading" secondItem="9nc-mz-ELP" secondAttribute="leading" constant="20" id="QlL-OE-q6j"/>
+                            <constraint firstItem="cBT-g3-FaQ" firstAttribute="leading" secondItem="zlK-TF-ksQ" secondAttribute="leading" id="aYu-kH-PX5"/>
+                            <constraint firstItem="Bk2-b3-Zdx" firstAttribute="trailing" secondItem="9nc-mz-ELP" secondAttribute="trailing" id="bIP-dY-Zs1"/>
+                            <constraint firstItem="Bk2-b3-Zdx" firstAttribute="leading" secondItem="9nc-mz-ELP" secondAttribute="leading" id="cBY-pf-jL5"/>
+                            <constraint firstItem="XEL-uv-fmU" firstAttribute="top" secondItem="9nc-mz-ELP" secondAttribute="top" id="cpR-6g-UYb"/>
+                            <constraint firstAttribute="bottom" secondItem="Bk2-b3-Zdx" secondAttribute="bottom" id="efD-5p-hfZ"/>
+                            <constraint firstAttribute="bottom" secondItem="cBT-g3-FaQ" secondAttribute="bottom" id="fvK-4Z-Glc"/>
+                            <constraint firstItem="uB2-z6-voF" firstAttribute="top" secondItem="zlK-TF-ksQ" secondAttribute="top" id="iPI-3I-Yk0"/>
+                            <constraint firstItem="uB2-z6-voF" firstAttribute="leading" secondItem="zlK-TF-ksQ" secondAttribute="leading" id="nRc-XG-Rnc"/>
+                            <constraint firstItem="XEL-uv-fmU" firstAttribute="top" secondItem="uB2-z6-voF" secondAttribute="bottom" id="pOL-JX-nVS"/>
+                            <constraint firstItem="cBT-g3-FaQ" firstAttribute="top" secondItem="XEL-uv-fmU" secondAttribute="bottom" id="qjK-wg-zmf"/>
+                            <constraint firstItem="9nc-mz-ELP" firstAttribute="trailing" secondItem="6CS-tL-m4P" secondAttribute="trailing" constant="20" id="uTz-rh-tbh"/>
+                            <constraint firstAttribute="trailing" secondItem="cBT-g3-FaQ" secondAttribute="trailing" id="vBk-Yc-kkm"/>
+                            <constraint firstItem="Bk2-b3-Zdx" firstAttribute="top" secondItem="zlK-TF-ksQ" secondAttribute="top" id="x1G-eQ-18d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9nc-mz-ELP"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentSumLabel" destination="P9x-64-0YY" id="sUU-It-aaN"/>
+                        <outlet property="currentSumProcentLabel" destination="itz-gQ-iMx" id="GaN-fh-59S"/>
+                        <outlet property="descriptionTextView" destination="gJS-9N-LmD" id="Qm1-ie-CsM"/>
+                        <outlet property="descriptionView" destination="6CS-tL-m4P" id="kgC-qF-iUr"/>
+                        <outlet property="donationsButton" destination="cW2-lS-2UC" id="1K3-Tw-ccQ"/>
+                        <outlet property="navBarView" destination="XEL-uv-fmU" id="VVH-6J-Zku"/>
+                        <outlet property="progressDonationView" destination="Gpg-Zm-8sQ" id="xre-ft-SaV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3A-kJ-qe6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Pzh-z4-TeC">
+                    <connections>
+                        <action selector="descriptionViewPanGestureGesureWithGesture:" destination="RdA-5l-R6k" id="W3d-sI-h1R"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="e49-vK-sLm">
+                    <connections>
+                        <action selector="descriptionViewTapGestureGesureWithGesture:" destination="RdA-5l-R6k" id="tlS-0c-qoy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hG3-4T-Hba">
+                    <connections>
+                        <action selector="descriptionViewTapGestureGesureWithGesture:" destination="RdA-5l-R6k" id="qIq-4F-Jdz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="XfP-Jf-tbr">
+                    <connections>
+                        <action selector="descriptionViewTapGestureGesureWithGesture:" destination="RdA-5l-R6k" id="70y-pL-SeI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZEz-EC-yaJ">
+                    <connections>
+                        <action selector="descriptionViewTapGestureGesureWithGesture:" destination="RdA-5l-R6k" id="qGd-aH-EGD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="102.89855072463769" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="architectureDonationspdf" width="622" height="622"/>
+        <image name="backgraundRegistration" width="375" height="812"/>
+        <image name="exit" width="30" height="30"/>
+        <namedColor name="buttonBukeryCell">
+            <color red="0.94900000095367432" green="0.75700002908706665" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navBarFon">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="oGl-Tz-Qwb" customClass="NoteTableCell" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGl-Tz-Qwb" id="BOa-mI-uOM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wf-ZH-M96" userLabel="CommonView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-VX-doP" userLabel="DeleteButtonView">
+                                <rect key="frame" x="314" y="0.0" width="100" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE3-Y2-SAb">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="55"/>
+                                        <state key="normal" title="Удалить">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteButtonWithButton:" destination="oGl-Tz-Qwb" eventType="touchUpInside" id="1QO-lU-Fmd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cE3-Y2-SAb" firstAttribute="leading" secondItem="rGF-VX-doP" secondAttribute="leading" id="2xt-xG-3f7"/>
+                                    <constraint firstAttribute="width" constant="100" id="KpJ-20-Zwa"/>
+                                    <constraint firstAttribute="bottom" secondItem="cE3-Y2-SAb" secondAttribute="bottom" id="PdG-lj-1Vt"/>
+                                    <constraint firstItem="cE3-Y2-SAb" firstAttribute="top" secondItem="rGF-VX-doP" secondAttribute="top" id="RWn-4P-NHe"/>
+                                    <constraint firstAttribute="trailing" secondItem="cE3-Y2-SAb" secondAttribute="trailing" id="a18-uK-Zgw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wp-lF-Llh" userLabel="TextFieldView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWv-tX-G4k">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="s1K-Uw-Dil" appends="YES" id="d2g-sJ-E9D"/>
+                                            <outletCollection property="gestureRecognizers" destination="Z9U-fQ-hKH" appends="YES" id="duA-oF-Hup"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="iWv-tX-G4k" firstAttribute="leading" secondItem="0Wp-lF-Llh" secondAttribute="leading" id="DNc-Nz-ata"/>
+                                    <constraint firstItem="iWv-tX-G4k" firstAttribute="top" secondItem="0Wp-lF-Llh" secondAttribute="top" id="bdd-Q0-9jh"/>
+                                    <constraint firstAttribute="trailing" secondItem="iWv-tX-G4k" secondAttribute="trailing" id="gKK-4D-lGS"/>
+                                    <constraint firstAttribute="bottom" secondItem="iWv-tX-G4k" secondAttribute="bottom" id="hlU-W5-2OL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0Wp-lF-Llh" secondAttribute="trailing" id="B9C-Iy-2to"/>
+                            <constraint firstAttribute="bottom" secondItem="0Wp-lF-Llh" secondAttribute="bottom" id="QKn-lD-NCj"/>
+                            <constraint firstAttribute="bottom" secondItem="rGF-VX-doP" secondAttribute="bottom" id="T5q-qv-FDF"/>
+                            <constraint firstAttribute="trailing" secondItem="rGF-VX-doP" secondAttribute="trailing" id="UA2-E5-ndj"/>
+                            <constraint firstItem="0Wp-lF-Llh" firstAttribute="top" secondItem="8wf-ZH-M96" secondAttribute="top" id="VqD-iu-MK5"/>
+                            <constraint firstItem="0Wp-lF-Llh" firstAttribute="leading" secondItem="8wf-ZH-M96" secondAttribute="leading" id="fgD-iI-A3C"/>
+                            <constraint firstItem="rGF-VX-doP" firstAttribute="top" secondItem="8wf-ZH-M96" secondAttribute="top" id="kYA-tq-lPp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8wf-ZH-M96" secondAttribute="trailing" id="2vC-ly-0Ja"/>
+                    <constraint firstAttribute="bottom" secondItem="8wf-ZH-M96" secondAttribute="bottom" constant="15" id="ULX-E6-uvV"/>
+                    <constraint firstItem="8wf-ZH-M96" firstAttribute="leading" secondItem="BOa-mI-uOM" secondAttribute="leading" id="nvT-Sk-yt3"/>
+                    <constraint firstItem="8wf-ZH-M96" firstAttribute="top" secondItem="BOa-mI-uOM" secondAttribute="top" id="vLY-vM-JhN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="peopleTextField" destination="iWv-tX-G4k" id="4LU-YQ-pyS"/>
+                <outlet property="textFieldView" destination="0Wp-lF-Llh" id="J9l-z2-zoo"/>
+            </connections>
+            <point key="canvasLocation" x="221.73913043478262" y="19.419642857142858"/>
+        </tableViewCell>
+        <swipeGestureRecognizer direction="left" id="s1K-Uw-Dil" userLabel="Delete">
+            <connections>
+                <action selector="deleteGesureWithGesture:" destination="oGl-Tz-Qwb" id="Hqp-en-N2e"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="Z9U-fQ-hKH" userLabel="Invalidate">
+            <connections>
+                <action selector="deleteGesureWithGesture:" destination="oGl-Tz-Qwb" id="315-iz-CKX"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

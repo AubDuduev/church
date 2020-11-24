@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q8t-Oe-QsE" customClass="WorshipCollectionCell" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="201"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRI-EW-Rvr" userLabel="CommonView">
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="201"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-db-FNe" userLabel="CommonStackView">
+                                <rect key="frame" x="15" y="15" width="317" height="186"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73o-f7-zR0" userLabel="DataWorshipView">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="45"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="orj-Ma-HW7" userLabel="DataStackView">
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="45"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 мая, суббота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fJ-qx-pz2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="317" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Блж. Матроны Московской" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-ia-cFP">
+                                                        <rect key="frame" x="0.0" y="22.5" width="317" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="14"/>
+                                                        <color key="textColor" name="textHeaderWorship"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="orj-Ma-HW7" firstAttribute="leading" secondItem="73o-f7-zR0" secondAttribute="leading" id="2I3-sS-9mz"/>
+                                            <constraint firstAttribute="trailing" secondItem="orj-Ma-HW7" secondAttribute="trailing" id="BMv-5Q-NJP"/>
+                                            <constraint firstAttribute="height" constant="45" id="gHG-2a-7El"/>
+                                            <constraint firstAttribute="bottom" secondItem="orj-Ma-HW7" secondAttribute="bottom" id="lVm-pR-VcX"/>
+                                            <constraint firstItem="orj-Ma-HW7" firstAttribute="top" secondItem="73o-f7-zR0" secondAttribute="top" id="pNh-qm-5P3"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P9W-FY-dwP">
+                                        <rect key="frame" x="0.0" y="45" width="317" height="141"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P9W-FY-dwP" firstAttribute="leading" secondItem="xSl-db-FNe" secondAttribute="leading" id="Jrn-dw-xd5"/>
+                                    <constraint firstAttribute="bottom" secondItem="P9W-FY-dwP" secondAttribute="bottom" id="M6T-CB-BvY"/>
+                                    <constraint firstAttribute="trailing" secondItem="P9W-FY-dwP" secondAttribute="trailing" id="bcC-S3-u2h"/>
+                                    <constraint firstAttribute="trailing" secondItem="73o-f7-zR0" secondAttribute="trailing" id="gsQ-pu-Knk"/>
+                                    <constraint firstItem="73o-f7-zR0" firstAttribute="top" secondItem="xSl-db-FNe" secondAttribute="top" id="zMP-Gj-kXD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xSl-db-FNe" secondAttribute="trailing" id="AW1-4a-9u5"/>
+                            <constraint firstAttribute="bottom" secondItem="xSl-db-FNe" secondAttribute="bottom" id="HDr-QF-dib"/>
+                            <constraint firstItem="xSl-db-FNe" firstAttribute="leading" secondItem="GRI-EW-Rvr" secondAttribute="leading" constant="15" id="IWj-1w-YTa"/>
+                            <constraint firstItem="xSl-db-FNe" firstAttribute="top" secondItem="GRI-EW-Rvr" secondAttribute="top" constant="15" id="Xlu-Yo-hLI"/>
+                            <constraint firstAttribute="bottom" secondItem="xSl-db-FNe" secondAttribute="bottom" id="kly-Sl-A7t"/>
+                            <constraint firstAttribute="trailing" secondItem="xSl-db-FNe" secondAttribute="trailing" id="kzw-0W-UGt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="OtO-6Y-Eqv"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GRI-EW-Rvr" secondAttribute="bottom" id="D8l-9o-2JX"/>
+                <constraint firstItem="GRI-EW-Rvr" firstAttribute="leading" secondItem="q8t-Oe-QsE" secondAttribute="leading" id="Ql1-pF-hyJ"/>
+                <constraint firstAttribute="trailing" secondItem="GRI-EW-Rvr" secondAttribute="trailing" id="gW3-cj-lN1"/>
+                <constraint firstItem="GRI-EW-Rvr" firstAttribute="top" secondItem="q8t-Oe-QsE" secondAttribute="top" id="qmb-Yd-aPc"/>
+            </constraints>
+            <size key="customSize" width="332" height="201"/>
+            <connections>
+                <outlet property="commonView" destination="GRI-EW-Rvr" id="ndb-8g-8Yb"/>
+                <outlet property="dateProgramLabel" destination="3fJ-qx-pz2" id="zMN-A6-zux"/>
+                <outlet property="nameProgramLabel" destination="iwi-ia-cFP" id="5aj-qH-zRb"/>
+                <outlet property="programTableView" destination="P9W-FY-dwP" id="nfM-pn-KCT"/>
+            </connections>
+            <point key="canvasLocation" x="340.57971014492756" y="194.53125"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="textHeaderWorship">
+            <color red="0.70200002193450928" green="0.72200000286102295" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

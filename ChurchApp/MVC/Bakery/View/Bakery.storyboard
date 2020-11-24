@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rm5-cX-wfr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Bakery View Controller-->
+        <scene sceneID="tp9-0r-4V1">
+            <objects>
+                <viewController storyboardIdentifier="BakeryViewController" id="rm5-cX-wfr" customClass="BakeryViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VGZ-de-JIV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundStart" translatesAutoresizingMaskIntoConstraints="NO" id="fmx-Zf-KeF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRK-ya-uNR" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQl-g2-NBh">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BQl-g2-NBh" secondAttribute="height" multiplier="1:1" id="G3P-3e-gCQ"/>
+                                        </constraints>
+                                        <color key="tintColor" name="tabBarFon"/>
+                                        <state key="normal" image="exit"/>
+                                        <connections>
+                                            <action selector="backButtonWithButton:" destination="rm5-cX-wfr" eventType="touchUpInside" id="mIY-tp-E1Z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продукты из пекарни" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHj-aH-6In">
+                                        <rect key="frame" x="60" y="0.0" width="294" height="60"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="navBarFon"/>
+                                <constraints>
+                                    <constraint firstItem="BQl-g2-NBh" firstAttribute="leading" secondItem="pRK-ya-uNR" secondAttribute="leading" id="8mQ-7K-SO8"/>
+                                    <constraint firstAttribute="bottom" secondItem="BQl-g2-NBh" secondAttribute="bottom" id="Mov-Fu-zd5"/>
+                                    <constraint firstAttribute="height" constant="60" id="OVB-OB-GoT"/>
+                                    <constraint firstAttribute="bottom" secondItem="yHj-aH-6In" secondAttribute="bottom" id="ege-yu-Fc8"/>
+                                    <constraint firstAttribute="trailing" secondItem="yHj-aH-6In" secondAttribute="trailing" constant="60" id="j78-pk-NwD"/>
+                                    <constraint firstItem="yHj-aH-6In" firstAttribute="leading" secondItem="BQl-g2-NBh" secondAttribute="trailing" id="mKy-Ba-fOi"/>
+                                    <constraint firstItem="yHj-aH-6In" firstAttribute="top" secondItem="pRK-ya-uNR" secondAttribute="top" id="vuV-cx-WES"/>
+                                    <constraint firstItem="BQl-g2-NBh" firstAttribute="top" secondItem="pRK-ya-uNR" secondAttribute="top" id="wYZ-wu-aBS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4co-T4-6BI" userLabel="SafeAreaView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" name="navBarFon"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NE-46-JHl" userLabel="CollectionViewView">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eCc-71-JyO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yak-Mt-EA6">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Azq-Ay-IP1" id="6vR-qr-ZRm"/>
+                                            <outlet property="delegate" destination="Azq-Ay-IP1" id="eev-CD-Kyx"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="eCc-71-JyO" secondAttribute="bottom" id="4nU-dy-kLS"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCc-71-JyO" secondAttribute="trailing" id="ZOL-1p-jY6"/>
+                                    <constraint firstItem="eCc-71-JyO" firstAttribute="leading" secondItem="6NE-46-JHl" secondAttribute="leading" id="ieO-RF-fji"/>
+                                    <constraint firstItem="eCc-71-JyO" firstAttribute="top" secondItem="6NE-46-JHl" secondAttribute="top" id="lRH-eW-glq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pRK-ya-uNR" firstAttribute="top" secondItem="Ft4-WX-Nx5" secondAttribute="top" id="1VW-zq-qgN"/>
+                            <constraint firstItem="4co-T4-6BI" firstAttribute="leading" secondItem="VGZ-de-JIV" secondAttribute="leading" id="2Ek-qR-rfw"/>
+                            <constraint firstAttribute="trailing" secondItem="pRK-ya-uNR" secondAttribute="trailing" id="8QQ-q3-nSZ"/>
+                            <constraint firstItem="pRK-ya-uNR" firstAttribute="top" secondItem="4co-T4-6BI" secondAttribute="bottom" id="9cc-wr-hWk"/>
+                            <constraint firstItem="pRK-ya-uNR" firstAttribute="leading" secondItem="VGZ-de-JIV" secondAttribute="leading" id="BjZ-NT-78Q"/>
+                            <constraint firstItem="fmx-Zf-KeF" firstAttribute="top" secondItem="VGZ-de-JIV" secondAttribute="top" id="DhT-Pp-lZg"/>
+                            <constraint firstAttribute="trailing" secondItem="4co-T4-6BI" secondAttribute="trailing" id="Lud-sA-MM5"/>
+                            <constraint firstAttribute="trailing" secondItem="6NE-46-JHl" secondAttribute="trailing" id="MOs-nk-HjN"/>
+                            <constraint firstItem="6NE-46-JHl" firstAttribute="leading" secondItem="VGZ-de-JIV" secondAttribute="leading" id="UxW-fm-vNC"/>
+                            <constraint firstItem="6NE-46-JHl" firstAttribute="top" secondItem="pRK-ya-uNR" secondAttribute="bottom" constant="10" id="XH2-Vd-zch"/>
+                            <constraint firstItem="4co-T4-6BI" firstAttribute="top" secondItem="VGZ-de-JIV" secondAttribute="top" id="Yq4-EZ-fxD"/>
+                            <constraint firstAttribute="bottom" secondItem="fmx-Zf-KeF" secondAttribute="bottom" id="bSS-Ij-s7J"/>
+                            <constraint firstItem="fmx-Zf-KeF" firstAttribute="leading" secondItem="VGZ-de-JIV" secondAttribute="leading" id="dah-oP-h0Z"/>
+                            <constraint firstAttribute="bottom" secondItem="6NE-46-JHl" secondAttribute="bottom" id="qdX-8W-lrh"/>
+                            <constraint firstAttribute="trailing" secondItem="fmx-Zf-KeF" secondAttribute="trailing" id="uRr-gl-28c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ft4-WX-Nx5"/>
+                    </view>
+                    <connections>
+                        <outlet property="bakeryCollection" destination="Azq-Ay-IP1" id="XVV-nr-3uR"/>
+                        <outlet property="bakeryCollectionView" destination="eCc-71-JyO" id="SnM-QK-xHO"/>
+                        <outlet property="navBarView" destination="pRK-ya-uNR" id="XZD-cw-gen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Giq-SW-jH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Azq-Ay-IP1" customClass="BakeryCollection" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-194.20289855072465" y="179.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundStart" width="375" height="812"/>
+        <image name="exit" width="30" height="30"/>
+        <namedColor name="navBarFon">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mox-ct-cI2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+        <array key="sf-ui-display-semibold.otf">
+            <string>SFUIDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Pay Note View Controller-->
+        <scene sceneID="tPe-iz-eV1">
+            <objects>
+                <viewController storyboardIdentifier="PayNoteViewController" id="Mox-ct-cI2" customClass="PayNoteViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYP-ef-51c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cXB-7v-6l0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmo-ZF-KZF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="D5k-RY-srW"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-3E-xg3" userLabel="CommonView">
+                                <rect key="frame" x="50" y="68" width="314" height="760"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDg-aV-EpF" userLabel="CornerRadiusView">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="760"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundNote" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-PN-zBq">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="760"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dxR-l8-OYC" userLabel="CommonStackView">
+                                                <rect key="frame" x="30" y="20" width="254" height="720"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="tDK-m1-Or1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="254" height="230"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="230" id="0Ev-Tg-4Pn"/>
+                                                        </constraints>
+                                                        <string key="text">Выберите количество дней, и наши священники будут ежедневно читать молитву для указанных имен. Если Вы хотите, чтобы служба по заданным именам проходила непрерывно, то поставьте галочку. "Оплачивать регулярно". Тогда, по истечению заданного периода, система автоматически снимет следующую оплату и службы продолжатся.</string>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3g-t5-3Ij" userLabel="ChangeDaysView">
+                                                        <rect key="frame" x="0.0" y="250" width="254" height="90"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qrE-aQ-O7V" userLabel="ChangeDaysViewStackView">
+                                                                <rect key="frame" x="1" y="1" width="252" height="88"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="UuC-Nr-5Z7" userLabel="TopStackView">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="252" height="43.5"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thI-Ba-0zc">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="43.5"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                                                <state key="normal" title="1 день">
+                                                                                    <color key="titleColor" name="makeDonationDaysText"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="daysDonationButtonsWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="Sm8-05-qBV"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOu-oV-bgL">
+                                                                                <rect key="frame" x="126.5" y="0.0" width="125.5" height="43.5"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                                                <state key="normal" title="40 дней">
+                                                                                    <color key="titleColor" name="makeDonationDaysText"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="daysDonationButtonsWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="Xty-2H-KPv"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ESI-aX-Zj1" userLabel="BottomStackView">
+                                                                        <rect key="frame" x="0.0" y="44.5" width="252" height="43.5"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Z8-5E-tkK">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="43.5"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                                                <state key="normal" title="6 месяцев">
+                                                                                    <color key="titleColor" name="makeDonationDaysText"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="daysDonationButtonsWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="o6C-jX-Koe"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ody-PE-1PX">
+                                                                                <rect key="frame" x="126.5" y="0.0" width="125.5" height="43.5"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                                                <state key="normal" title="12 месяцев">
+                                                                                    <color key="titleColor" name="makeDonationDaysText"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="daysDonationButtonsWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="lbY-K5-ZQT"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="buttonBukeryCell"/>
+                                                        <constraints>
+                                                            <constraint firstItem="qrE-aQ-O7V" firstAttribute="top" secondItem="o3g-t5-3Ij" secondAttribute="top" constant="1" id="HIA-GQ-p7G"/>
+                                                            <constraint firstAttribute="bottom" secondItem="qrE-aQ-O7V" secondAttribute="bottom" constant="1" id="WAw-ZF-1ow"/>
+                                                            <constraint firstItem="qrE-aQ-O7V" firstAttribute="leading" secondItem="o3g-t5-3Ij" secondAttribute="leading" constant="1" id="Y6p-bp-MVF"/>
+                                                            <constraint firstAttribute="height" constant="90" id="oJP-cD-7N0"/>
+                                                            <constraint firstAttribute="trailing" secondItem="qrE-aQ-O7V" secondAttribute="trailing" constant="1" id="zHX-WY-2FX"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q00-FB-g6k" userLabel="SorocoustTypeView">
+                                                        <rect key="frame" x="0.0" y="360" width="254" height="45"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fnN-4P-C4q" userLabel="SorocoustTypeStackView">
+                                                                <rect key="frame" x="1" y="1" width="252" height="43"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-hd-0vy" userLabel="TopStackView">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="252" height="43"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fl-YC-2mA">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="43"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                                                <state key="normal" title="О здравии">
+                                                                                    <color key="titleColor" name="makeDonationDaysText"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="aboutHealthAboutReposeButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="mTR-Pj-ByI"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNG-rx-k2A">
+                                                                                <rect key="frame" x="126.5" y="0.0" width="125.5" height="43"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                                                <state key="normal" title="Об упокоении">
+                                                                                    <color key="titleColor" name="makeDonationDaysText"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="aboutHealthAboutReposeButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="285-hi-aOz"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="buttonBukeryCell"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="11d-Vc-IVU"/>
+                                                            <constraint firstItem="fnN-4P-C4q" firstAttribute="top" secondItem="Q00-FB-g6k" secondAttribute="top" constant="1" id="CVW-at-Q1a"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fnN-4P-C4q" secondAttribute="trailing" constant="1" id="Emh-uS-wYm"/>
+                                                            <constraint firstAttribute="bottom" secondItem="fnN-4P-C4q" secondAttribute="bottom" constant="1" id="bKe-9X-kMa"/>
+                                                            <constraint firstItem="fnN-4P-C4q" firstAttribute="leading" secondItem="Q00-FB-g6k" secondAttribute="leading" constant="1" id="pmu-xO-b1b"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-6y-fL4" userLabel="ChangeIconSvatoiView">
+                                                        <rect key="frame" x="0.0" y="425" width="254" height="100"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uvm-UZ-SUM" userLabel="ChangeIconSvatoiStackView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="254" height="100"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8N-nB-yQ2" userLabel="ButtonIconView">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="254" height="45"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-ia-hsc">
+                                                                                <rect key="frame" x="20" y="5" width="214" height="35"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jde-ss-bvh" userLabel="ButtonStackView">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="214" height="35"/>
+                                                                                        <subviews>
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dC-nc-Eus">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="214" height="35"/>
+                                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                <state key="normal" title="Выбрать икону">
+                                                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                </state>
+                                                                                                <connections>
+                                                                                                    <action selector="сhoosePSButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="vyT-ry-E6V"/>
+                                                                                                </connections>
+                                                                                            </button>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="Jde-ss-bvh" firstAttribute="leading" secondItem="fF7-ia-hsc" secondAttribute="leading" id="22F-cG-XVZ"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="Jde-ss-bvh" secondAttribute="trailing" id="6jr-cg-8Tp"/>
+                                                                                    <constraint firstItem="Jde-ss-bvh" firstAttribute="top" secondItem="fF7-ia-hsc" secondAttribute="top" id="Lls-48-1hf"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="Jde-ss-bvh" secondAttribute="bottom" id="tNV-3O-cBc"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="bottom" secondItem="fF7-ia-hsc" secondAttribute="bottom" constant="5" id="Rvr-OA-vJL"/>
+                                                                            <constraint firstItem="fF7-ia-hsc" firstAttribute="leading" secondItem="K8N-nB-yQ2" secondAttribute="leading" constant="20" id="Tg7-tN-noa"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="fF7-ia-hsc" secondAttribute="trailing" constant="20" id="dvk-vm-quw"/>
+                                                                            <constraint firstItem="fF7-ia-hsc" firstAttribute="top" secondItem="K8N-nB-yQ2" secondAttribute="top" constant="5" id="frf-Nl-PNj"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajq-da-vm5" userLabel="ButtonSvatView">
+                                                                        <rect key="frame" x="0.0" y="55" width="254" height="45"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-d4-uHG">
+                                                                                <rect key="frame" x="20" y="5" width="214" height="35"/>
+                                                                                <subviews>
+                                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-hy-OhG" userLabel="ButtonStackView">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="214" height="35"/>
+                                                                                        <subviews>
+                                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyv-lv-pfB">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="214" height="35"/>
+                                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                                <state key="normal" title="Выбрать святого">
+                                                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                </state>
+                                                                                                <connections>
+                                                                                                    <action selector="сhoosePSButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="RDs-aY-umB"/>
+                                                                                                </connections>
+                                                                                            </button>
+                                                                                        </subviews>
+                                                                                    </stackView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="Keu-hy-OhG" firstAttribute="leading" secondItem="CKc-d4-uHG" secondAttribute="leading" id="H3N-ZD-17Q"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="Keu-hy-OhG" secondAttribute="bottom" id="NlS-pn-kHH"/>
+                                                                                    <constraint firstItem="Keu-hy-OhG" firstAttribute="top" secondItem="CKc-d4-uHG" secondAttribute="top" id="lKg-KP-2Tm"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="Keu-hy-OhG" secondAttribute="trailing" id="xau-aH-2vF"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="CKc-d4-uHG" firstAttribute="top" secondItem="ajq-da-vm5" secondAttribute="top" constant="5" id="NFB-QT-ZhP"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="CKc-d4-uHG" secondAttribute="trailing" constant="20" id="fdC-gg-z75"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="CKc-d4-uHG" secondAttribute="bottom" constant="5" id="hIT-hB-DQe"/>
+                                                                            <constraint firstItem="CKc-d4-uHG" firstAttribute="leading" secondItem="ajq-da-vm5" secondAttribute="leading" constant="20" id="l97-sr-a76"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="Uvm-UZ-SUM" secondAttribute="bottom" id="ARb-7r-9w8"/>
+                                                            <constraint firstItem="Uvm-UZ-SUM" firstAttribute="leading" secondItem="6SK-6y-fL4" secondAttribute="leading" id="KeD-oS-RAC"/>
+                                                            <constraint firstAttribute="height" constant="100" id="UXz-Pa-b59"/>
+                                                            <constraint firstItem="Uvm-UZ-SUM" firstAttribute="top" secondItem="6SK-6y-fL4" secondAttribute="top" id="kIf-XS-Rwi"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Uvm-UZ-SUM" secondAttribute="trailing" id="nZo-9k-OUS"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ty-83-mpd" userLabel="CommentView">
+                                                        <rect key="frame" x="0.0" y="545" width="254" height="45"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш комментарий" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ck-WW-SoR">
+                                                                <rect key="frame" x="10" y="0.0" width="234" height="45"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="AAu-Qx-Sw7"/>
+                                                            <constraint firstAttribute="bottom" secondItem="6ck-WW-SoR" secondAttribute="bottom" id="Lii-pd-f6v"/>
+                                                            <constraint firstItem="6ck-WW-SoR" firstAttribute="leading" secondItem="5ty-83-mpd" secondAttribute="leading" constant="10" id="Tsx-6H-jDx"/>
+                                                            <constraint firstItem="6ck-WW-SoR" firstAttribute="top" secondItem="5ty-83-mpd" secondAttribute="top" id="cYC-4Y-ynC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="6ck-WW-SoR" secondAttribute="trailing" constant="10" id="j9v-gc-uFC"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDv-MQ-vaR" userLabel="WontHelpView">
+                                                        <rect key="frame" x="0.0" y="610" width="254" height="40"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-g9-IBB" userLabel="WontHelpStackView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="254" height="40"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAK-ld-X9V">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="aAK-ld-X9V" secondAttribute="height" multiplier="1:1" id="kAk-KK-qRx"/>
+                                                                        </constraints>
+                                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <connections>
+                                                                            <action selector="recurrentDonationButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="BlF-xv-wz1"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оплачивать регулярно" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="LVh-JL-8QL">
+                                                                        <rect key="frame" x="60" y="0.0" width="194" height="40"/>
+                                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="16"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="aZe-g9-IBB" secondAttribute="bottom" id="7z6-Xu-Qw6"/>
+                                                            <constraint firstItem="aZe-g9-IBB" firstAttribute="leading" secondItem="kDv-MQ-vaR" secondAttribute="leading" id="9Ri-n5-hyh"/>
+                                                            <constraint firstItem="aZe-g9-IBB" firstAttribute="top" secondItem="kDv-MQ-vaR" secondAttribute="top" id="Jec-io-28t"/>
+                                                            <constraint firstAttribute="height" constant="40" id="Qzk-y4-F3q"/>
+                                                            <constraint firstAttribute="trailing" secondItem="aZe-g9-IBB" secondAttribute="trailing" id="SEg-GS-Jbd"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-N4-juI" userLabel="MakeDonationView">
+                                                        <rect key="frame" x="0.0" y="670" width="254" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-n8-IHP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="254" height="50"/>
+                                                                <color key="backgroundColor" name="buttonBukeryCell"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="newOrderButtonWithButton:" destination="Mox-ct-cI2" eventType="touchUpInside" id="mqq-mf-gIt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Перейти к оплате" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Ana-zo-6up">
+                                                                <rect key="frame" x="5" y="0.0" width="244" height="50"/>
+                                                                <fontDescription key="fontDescription" name="SFUIDisplay-Semibold" family="SF UI Display" pointSize="18"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="p8Q-n8-IHP" secondAttribute="bottom" id="7YP-af-lbp"/>
+                                                            <constraint firstItem="Ana-zo-6up" firstAttribute="leading" secondItem="JC0-N4-juI" secondAttribute="leading" constant="5" id="EKJ-R8-nsp"/>
+                                                            <constraint firstItem="p8Q-n8-IHP" firstAttribute="top" secondItem="JC0-N4-juI" secondAttribute="top" id="Ue4-ne-hPI"/>
+                                                            <constraint firstItem="Ana-zo-6up" firstAttribute="top" secondItem="JC0-N4-juI" secondAttribute="top" id="Yjc-4s-VoC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ana-zo-6up" secondAttribute="trailing" constant="5" id="dag-sN-wB1"/>
+                                                            <constraint firstAttribute="height" constant="50" id="fOl-kI-hIC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="p8Q-n8-IHP" secondAttribute="trailing" id="hdX-tt-HW1"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Ana-zo-6up" secondAttribute="bottom" id="nle-nZ-yuM"/>
+                                                            <constraint firstItem="p8Q-n8-IHP" firstAttribute="leading" secondItem="JC0-N4-juI" secondAttribute="leading" id="tyB-iY-hpm"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="yzt-PN-zBq" secondAttribute="trailing" id="M15-AV-J4K"/>
+                                            <constraint firstItem="yzt-PN-zBq" firstAttribute="leading" secondItem="uDg-aV-EpF" secondAttribute="leading" id="Muv-8b-wmC"/>
+                                            <constraint firstItem="dxR-l8-OYC" firstAttribute="leading" secondItem="uDg-aV-EpF" secondAttribute="leading" constant="30" id="ZF7-Zd-gsU"/>
+                                            <constraint firstAttribute="trailing" secondItem="dxR-l8-OYC" secondAttribute="trailing" constant="30" id="bTI-8b-X0b"/>
+                                            <constraint firstItem="dxR-l8-OYC" firstAttribute="top" secondItem="uDg-aV-EpF" secondAttribute="top" constant="20" id="fKo-Iy-sd1"/>
+                                            <constraint firstAttribute="bottom" secondItem="dxR-l8-OYC" secondAttribute="bottom" constant="20" id="hiC-FL-jpr"/>
+                                            <constraint firstAttribute="bottom" secondItem="yzt-PN-zBq" secondAttribute="bottom" id="lJr-DU-fXA"/>
+                                            <constraint firstItem="yzt-PN-zBq" firstAttribute="top" secondItem="uDg-aV-EpF" secondAttribute="top" id="vCe-ip-8fx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="uDg-aV-EpF" firstAttribute="top" secondItem="EC8-3E-xg3" secondAttribute="top" id="9vN-xa-5xi"/>
+                                    <constraint firstAttribute="bottom" secondItem="uDg-aV-EpF" secondAttribute="bottom" id="KYi-gx-hgC"/>
+                                    <constraint firstItem="uDg-aV-EpF" firstAttribute="leading" secondItem="EC8-3E-xg3" secondAttribute="leading" id="LPB-vx-Z1x"/>
+                                    <constraint firstAttribute="trailing" secondItem="uDg-aV-EpF" secondAttribute="trailing" id="qoh-O8-zxC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qgf-rT-zVA"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qgf-rT-zVA" firstAttribute="bottom" secondItem="Tmo-ZF-KZF" secondAttribute="bottom" id="3x1-uR-H5a"/>
+                            <constraint firstItem="EC8-3E-xg3" firstAttribute="centerY" secondItem="eYP-ef-51c" secondAttribute="centerY" id="9xX-2b-l5p"/>
+                            <constraint firstItem="Tmo-ZF-KZF" firstAttribute="top" secondItem="qgf-rT-zVA" secondAttribute="top" id="Ca5-mx-wbR"/>
+                            <constraint firstAttribute="trailing" secondItem="cXB-7v-6l0" secondAttribute="trailing" id="OHz-zE-Hss"/>
+                            <constraint firstItem="qgf-rT-zVA" firstAttribute="trailing" secondItem="Tmo-ZF-KZF" secondAttribute="trailing" id="XbJ-Od-RHB"/>
+                            <constraint firstItem="EC8-3E-xg3" firstAttribute="leading" secondItem="qgf-rT-zVA" secondAttribute="leading" constant="50" id="coK-SA-2Vi"/>
+                            <constraint firstItem="qgf-rT-zVA" firstAttribute="trailing" secondItem="EC8-3E-xg3" secondAttribute="trailing" constant="50" id="csv-Vo-wY1"/>
+                            <constraint firstItem="Tmo-ZF-KZF" firstAttribute="leading" secondItem="qgf-rT-zVA" secondAttribute="leading" id="hqh-ke-JL0"/>
+                            <constraint firstItem="cXB-7v-6l0" firstAttribute="top" secondItem="eYP-ef-51c" secondAttribute="top" id="iHU-x9-cGW"/>
+                            <constraint firstItem="cXB-7v-6l0" firstAttribute="leading" secondItem="eYP-ef-51c" secondAttribute="leading" id="oig-1j-Vp9"/>
+                            <constraint firstItem="EC8-3E-xg3" firstAttribute="centerX" secondItem="eYP-ef-51c" secondAttribute="centerX" id="sOh-VY-HqO"/>
+                            <constraint firstAttribute="bottom" secondItem="cXB-7v-6l0" secondAttribute="bottom" id="tkr-vi-keT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgraundImageView" destination="yzt-PN-zBq" id="LVb-jt-xR4"/>
+                        <outlet property="buttonIconView" destination="K8N-nB-yQ2" id="gIb-GG-7YA"/>
+                        <outlet property="buttonMolebenView" destination="6SK-6y-fL4" id="1tT-V6-xHu"/>
+                        <outlet property="buttonSvatView" destination="ajq-da-vm5" id="bDR-u2-6S6"/>
+                        <outlet property="changeDaysView" destination="o3g-t5-3Ij" id="PdP-13-blZ"/>
+                        <outlet property="checkMarkButton" destination="aAK-ld-X9V" id="hEI-Te-1Bq"/>
+                        <outlet property="commentTextField" destination="6ck-WW-SoR" id="448-1l-TCc"/>
+                        <outlet property="commentView" destination="5ty-83-mpd" id="mdB-iA-QS8"/>
+                        <outlet property="commonImageView" destination="cXB-7v-6l0" id="lH0-0I-3Ev"/>
+                        <outlet property="commonView" destination="EC8-3E-xg3" id="yz8-KI-E2m"/>
+                        <outlet property="cornerRadiusView" destination="uDg-aV-EpF" id="DqA-3b-RdN"/>
+                        <outlet property="makeDonationView" destination="JC0-N4-juI" id="1LI-5A-6Bq"/>
+                        <outlet property="payButton" destination="p8Q-n8-IHP" id="yrn-Yv-sCI"/>
+                        <outlet property="payButtonLabel" destination="Ana-zo-6up" id="e1K-cy-MnO"/>
+                        <outlet property="sorocoustTypeView" destination="Q00-FB-g6k" id="V2l-te-X1l"/>
+                        <outletCollection property="daysDonationButtons" destination="thI-Ba-0zc" collectionClass="NSMutableArray" id="de9-sf-7H4"/>
+                        <outletCollection property="daysDonationButtons" destination="UOu-oV-bgL" collectionClass="NSMutableArray" id="r4L-LX-WqI"/>
+                        <outletCollection property="daysDonationButtons" destination="9Z8-5E-tkK" collectionClass="NSMutableArray" id="qKF-Nv-gZW"/>
+                        <outletCollection property="daysDonationButtons" destination="ody-PE-1PX" collectionClass="NSMutableArray" id="Jwd-FO-mb6"/>
+                        <outletCollection property="aboutHealthAboutReposeButtons" destination="0Fl-YC-2mA" collectionClass="NSMutableArray" id="n6H-K4-8fD"/>
+                        <outletCollection property="aboutHealthAboutReposeButtons" destination="GNG-rx-k2A" collectionClass="NSMutableArray" id="GTA-O3-TPA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRk-bt-ya5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46.376811594202906" y="191.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundNote" width="375" height="775"/>
+        <namedColor name="buttonBukeryCell">
+            <color red="0.94900000095367432" green="0.75700002908706665" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="makeDonationDaysText">
+            <color red="0.63099998235702515" green="0.6589999794960022" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

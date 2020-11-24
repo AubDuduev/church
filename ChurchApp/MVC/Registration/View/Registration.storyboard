@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xl4-pH-23l">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSerif-Bold.ttf">
+            <string>NotoSerif-Bold</string>
+        </array>
+        <array key="NotoSerif-Regular.ttf">
+            <string>NotoSerif</string>
+        </array>
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-light.otf">
+            <string>SFUIDisplay-Light</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="b0r-71-4nq">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="xl4-pH-23l" customClass="RegistrationViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0kq-oX-5sy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundRegistration" translatesAutoresizingMaskIntoConstraints="NO" id="3UX-lQ-mbg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-63-57h">
+                                <rect key="frame" x="354" y="74" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TZ7-aw-Aml"/>
+                                    <constraint firstAttribute="width" constant="30" id="YXN-Hq-49E"/>
+                                </constraints>
+                                <color key="tintColor" red="0.98028594260000002" green="0.9804533124" blue="0.98027533290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="infoRegistration"/>
+                                <connections>
+                                    <action selector="informationButtonWithButton:" destination="xl4-pH-23l" eventType="touchUpInside" id="bSP-MH-TdW"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-9" translatesAutoresizingMaskIntoConstraints="NO" id="4qm-xU-5me" userLabel="TextStackView">
+                                <rect key="frame" x="16" y="532" width="382" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Патриаршее Подворье" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fre-fF-APN">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="FQt-ye-H1U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSerif" family="Noto Serif" pointSize="24"/>
+                                        <color key="textColor" red="0.98028594260000002" green="0.9804533124" blue="0.98027533290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.98028594260000002" green="0.9804533124" blue="0.98027533290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="2"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-55" translatesAutoresizingMaskIntoConstraints="NO" id="a03-F0-C53" userLabel="BoldStackView">
+                                        <rect key="frame" x="0.0" y="21" width="382" height="179"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Храм святителя                     " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fH2-Ji-2Xa">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSerif-Bold" family="Noto Serif" pointSize="27"/>
+                                                <color key="textColor" red="0.98028594260000002" green="0.9804533124" blue="0.98027533290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Николая Чудотворца " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNZ-CP-Ff7">
+                                                <rect key="frame" x="0.0" y="41.5" width="382" height="96"/>
+                                                <fontDescription key="fontDescription" name="NotoSerif-Bold" family="Noto Serif" pointSize="27"/>
+                                                <color key="textColor" red="0.98028594260000002" green="0.9804533124" blue="0.98027533290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="в Подкопа́ях" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmP-vb-Py1">
+                                                <rect key="frame" x="0.0" y="82.5" width="382" height="96.5"/>
+                                                <fontDescription key="fontDescription" name="NotoSerif-Bold" family="Noto Serif" pointSize="27"/>
+                                                <color key="textColor" red="0.98028594260000002" green="0.9804533124" blue="0.98027533290000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="2" height="2"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dNZ-CP-Ff7" firstAttribute="height" secondItem="fH2-Ji-2Xa" secondAttribute="height" id="CgC-UK-eDB"/>
+                                            <constraint firstItem="KmP-vb-Py1" firstAttribute="height" secondItem="fH2-Ji-2Xa" secondAttribute="height" id="R6S-BZ-Nx5"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="zox-nh-y8k"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OiD-Gm-Fof" userLabel="RegistrationButtonView">
+                                <rect key="frame" x="27" y="751" width="360" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6w0-gF-aD9" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-gT-IFr">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="18"/>
+                                                <state key="normal" title="ВОЙТИ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="registrationButtonWithButton:" destination="xl4-pH-23l" eventType="touchUpInside" id="ceq-6H-509"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6w0-gF-aD9" firstAttribute="top" secondItem="OiD-Gm-Fof" secondAttribute="top" id="7Nk-eP-kzH"/>
+                                    <constraint firstItem="6w0-gF-aD9" firstAttribute="centerX" secondItem="OiD-Gm-Fof" secondAttribute="centerX" id="AnJ-sp-gH5"/>
+                                    <constraint firstItem="6w0-gF-aD9" firstAttribute="leading" secondItem="OiD-Gm-Fof" secondAttribute="leading" id="IcT-5m-QQh"/>
+                                    <constraint firstAttribute="trailing" secondItem="6w0-gF-aD9" secondAttribute="trailing" id="ocd-Ye-XYf"/>
+                                    <constraint firstAttribute="height" constant="50" id="qjv-T2-fTC"/>
+                                    <constraint firstAttribute="bottom" secondItem="6w0-gF-aD9" secondAttribute="bottom" id="zAr-2k-Mgb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="stT-Yq-pio" firstAttribute="trailing" secondItem="Ob6-63-57h" secondAttribute="trailing" constant="30" id="0w3-8y-VTV"/>
+                            <constraint firstItem="4qm-xU-5me" firstAttribute="leading" secondItem="stT-Yq-pio" secondAttribute="leading" constant="16" id="1Wq-XJ-Fur"/>
+                            <constraint firstItem="3UX-lQ-mbg" firstAttribute="top" secondItem="0kq-oX-5sy" secondAttribute="top" id="5Tl-yq-RnI"/>
+                            <constraint firstItem="stT-Yq-pio" firstAttribute="trailing" secondItem="4qm-xU-5me" secondAttribute="trailing" constant="16" id="ECX-0J-HZM"/>
+                            <constraint firstItem="stT-Yq-pio" firstAttribute="bottom" secondItem="4qm-xU-5me" secondAttribute="bottom" constant="130" id="J3u-qA-4Wh"/>
+                            <constraint firstItem="3UX-lQ-mbg" firstAttribute="leading" secondItem="stT-Yq-pio" secondAttribute="leading" id="KGM-vI-7Rf"/>
+                            <constraint firstItem="3UX-lQ-mbg" firstAttribute="trailing" secondItem="stT-Yq-pio" secondAttribute="trailing" id="KnC-Mf-15q"/>
+                            <constraint firstAttribute="bottom" secondItem="3UX-lQ-mbg" secondAttribute="bottom" id="OxR-xe-06g"/>
+                            <constraint firstItem="stT-Yq-pio" firstAttribute="trailing" secondItem="OiD-Gm-Fof" secondAttribute="trailing" constant="27" id="WCt-yD-VPa"/>
+                            <constraint firstItem="Ob6-63-57h" firstAttribute="top" secondItem="stT-Yq-pio" secondAttribute="top" constant="30" id="i73-J6-Kmb"/>
+                            <constraint firstItem="OiD-Gm-Fof" firstAttribute="leading" secondItem="stT-Yq-pio" secondAttribute="leading" constant="27" id="qwd-Uv-UyX"/>
+                            <constraint firstItem="OiD-Gm-Fof" firstAttribute="top" secondItem="4qm-xU-5me" secondAttribute="bottom" constant="19" id="xzx-T0-ss8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="stT-Yq-pio"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoChurcheButton" destination="Ob6-63-57h" id="0Us-2N-O78"/>
+                        <outlet property="infoChurcheView" destination="Sng-AQ-FDs" id="bbO-Ax-lzq"/>
+                        <outlet property="registrationButtonView" destination="OiD-Gm-Fof" id="Fl4-4W-vKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXi-QH-hX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Sng-AQ-FDs" userLabel="InfoCurcheView">
+                    <rect key="frame" x="0.0" y="0.0" width="397" height="385"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="owr-Vh-qf9" userLabel="CommonStackView">
+                            <rect key="frame" x="15" y="25" width="367" height="360"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О Храме" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2c-B1-IDg">
+                                    <rect key="frame" x="0.0" y="0.0" width="367" height="36"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mrH-bJ-lmC">
+                                    <rect key="frame" x="0.0" y="36" width="367" height="324"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <string key="text">Храм Свт. Николая в Подкопаях, в Подкопаеве, или просто Николай Подкопай – один из многочисленных храмов Первопрестольной, посвященных Николаю Угоднику. Каких только нет среди них: и Николы в Пыжах, и в Звонарях, и на Болвановке. Когда-то был даже Никола на Курьих ножках. Однако наш Подкопаевский нам особенно близок и дорог. Расположенный поблизости от современной станции метро «Китай-город», он невелик, но уютен. В нем три престола: Казанской Божьей Матери, Святителя Николая Чудотворца и преподобного Сергия Радонежского. Жизнь храма можно уподобить горящей свече. Наша подкопаевская свеча загорелась в Белом городе, за Китайгородской стеной, почти шесть веков назад. В исторических источниках Никольский храм близ великокняжеской резиденции у основания Ивановской горки, упоминается, начиная с конца ХУ в. А переулок, в котором стоял храм, одно время так и назывался – Никольский. С течением времени внешний вид храма изменялся. В 1700 г. возвели уникальное изящное шестигранное завершение, которое и сейчас очень украшает храм. Спустя полвека на средства прихожан была построена колокольня, а при ней отдельно стоящая кладовая палата. Входили тогда в храм не так, как сейчас, со стороны Подкопаевского переулка – главный вход был южным и располагался в Подколокольном переулке. А названия-то какие чудесные: Подколокольный – значит явно под колоколами, к церковному звону прислушивается, а Подкопаевский почему – неизвестно. Только догадки всякие существуют. Одни связывают его с фамилией владельца соседнего двора, другие с глиняным карьером, а третьи – ни с чем иным, как с подкопом. Как бы то ни было, название закрепилось прочно, и не только за переулком. Подкопаевцами называют себя и постоянные прихожане храма, и бойцы военно-патриотической дружины, вот уже почти девять лет существующей при храме. Подкопаевцам хорошо известны связанные с этим названием легенды. Одна из них так и называется Николай-Подкопай. Это очень необычная история.</string>
+                                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <fontDescription key="fontDescription" name="SFUIDisplay-Light" family="SF UI Display" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="owr-Vh-qf9" firstAttribute="leading" secondItem="Gm3-0T-TNT" secondAttribute="leading" constant="15" id="6r4-yS-0cj"/>
+                        <constraint firstItem="owr-Vh-qf9" firstAttribute="top" secondItem="Sng-AQ-FDs" secondAttribute="top" constant="25" id="Qv7-Gs-iv1"/>
+                        <constraint firstItem="owr-Vh-qf9" firstAttribute="bottom" secondItem="Gm3-0T-TNT" secondAttribute="bottom" id="bRh-6g-zuL"/>
+                        <constraint firstItem="owr-Vh-qf9" firstAttribute="trailing" secondItem="Gm3-0T-TNT" secondAttribute="trailing" constant="-15" id="snc-UC-OeO"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Gm3-0T-TNT"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="177.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundRegistration" width="375" height="812"/>
+        <image name="infoRegistration" width="30" height="30"/>
+    </resources>
+</document>

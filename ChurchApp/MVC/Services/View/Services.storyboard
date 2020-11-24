@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B6U-Bn-fZL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Services View Controller-->
+        <scene sceneID="gCq-Qm-n80">
+            <objects>
+                <viewController storyboardIdentifier="ServicesViewController" id="B6U-Bn-fZL" customClass="ServicesViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sqM-J9-oc5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8S-ZS-fOT" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="bz6-e4-yZF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-dg-cV8" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundStart" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-bb-3h5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JXp-V6-IOt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="XZ7-XT-fF8" id="cpw-37-jeR"/>
+                                            <outlet property="delegate" destination="XZ7-XT-fF8" id="TT7-fG-kCS"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Knj-bb-3h5" secondAttribute="trailing" id="7tj-aY-QRW"/>
+                                    <constraint firstItem="JXp-V6-IOt" firstAttribute="leading" secondItem="gz5-dg-cV8" secondAttribute="leading" id="GXA-hs-FEz"/>
+                                    <constraint firstItem="Knj-bb-3h5" firstAttribute="top" secondItem="gz5-dg-cV8" secondAttribute="top" id="PCY-Bk-NJk"/>
+                                    <constraint firstAttribute="trailing" secondItem="JXp-V6-IOt" secondAttribute="trailing" id="WpO-6M-qB8"/>
+                                    <constraint firstAttribute="bottom" secondItem="JXp-V6-IOt" secondAttribute="bottom" id="Z2F-M5-vKh"/>
+                                    <constraint firstItem="JXp-V6-IOt" firstAttribute="top" secondItem="gz5-dg-cV8" secondAttribute="top" id="Ztb-2D-ojG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Knj-bb-3h5" secondAttribute="bottom" id="f8l-qv-N4o"/>
+                                    <constraint firstItem="Knj-bb-3h5" firstAttribute="leading" secondItem="gz5-dg-cV8" secondAttribute="leading" id="voZ-0q-ryn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gz5-dg-cV8" firstAttribute="top" secondItem="Z8S-ZS-fOT" secondAttribute="bottom" id="318-TK-lI0"/>
+                            <constraint firstItem="Z8S-ZS-fOT" firstAttribute="trailing" secondItem="XJd-6D-EIn" secondAttribute="trailing" id="7JR-ER-Pek"/>
+                            <constraint firstItem="gz5-dg-cV8" firstAttribute="trailing" secondItem="XJd-6D-EIn" secondAttribute="trailing" id="AP1-8P-GLi"/>
+                            <constraint firstItem="Z8S-ZS-fOT" firstAttribute="leading" secondItem="XJd-6D-EIn" secondAttribute="leading" id="Afp-6R-NbU"/>
+                            <constraint firstItem="Z8S-ZS-fOT" firstAttribute="top" secondItem="XJd-6D-EIn" secondAttribute="top" id="BxP-Cb-ka0"/>
+                            <constraint firstItem="gz5-dg-cV8" firstAttribute="top" secondItem="Z8S-ZS-fOT" secondAttribute="bottom" id="G3j-rn-0sD"/>
+                            <constraint firstItem="XJd-6D-EIn" firstAttribute="bottom" secondItem="gz5-dg-cV8" secondAttribute="bottom" id="fuS-J2-jMR"/>
+                            <constraint firstItem="gz5-dg-cV8" firstAttribute="leading" secondItem="XJd-6D-EIn" secondAttribute="leading" id="qIA-yr-jwh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XJd-6D-EIn"/>
+                    </view>
+                    <connections>
+                        <outlet property="servicesTable" destination="XZ7-XT-fF8" id="EP8-OG-3xW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJa-G2-N6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="XZ7-XT-fF8" customClass="ServicesTable" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-130.43478260869566" y="183.48214285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundStart" width="375" height="812"/>
+    </resources>
+</document>

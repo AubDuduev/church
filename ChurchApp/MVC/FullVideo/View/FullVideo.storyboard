@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2lg-uH-1OO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Full Video View Controller-->
+        <scene sceneID="bdi-vo-ccv">
+            <objects>
+                <viewController storyboardIdentifier="FullVideoViewController" id="2lg-uH-1OO" customClass="FullVideoViewController" customModule="DgBetTrip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ik-Qk-eea">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPp-Ug-I9q">
+                                <rect key="frame" x="1" y="1" width="598" height="598"/>
+                                <connections>
+                                    <action selector="backButton:" destination="2lg-uH-1OO" eventType="touchUpInside" id="xOn-Gk-cUU"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdl-Cb-oh9" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gPl-LZ-0Tg" userLabel="BackView">
+                                        <rect key="frame" x="9" y="1" width="80" height="42"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XvC-si-Igh">
+                                                <rect key="frame" x="1" y="1" width="78" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit" translatesAutoresizingMaskIntoConstraints="NO" id="A1B-Zh-sxs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="19" height="40"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="19" id="U6S-hA-fIr"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppu-Ma-fqi">
+                                                        <rect key="frame" x="23" y="0.0" width="55" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                        <state key="normal" title="Назад">
+                                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="backButton:" destination="2lg-uH-1OO" eventType="touchUpInside" id="jyv-mj-H5J"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="XvC-si-Igh" secondAttribute="bottom" constant="1" id="III-He-O2x"/>
+                                            <constraint firstItem="XvC-si-Igh" firstAttribute="leading" secondItem="gPl-LZ-0Tg" secondAttribute="leading" constant="1" id="M9q-6k-DGm"/>
+                                            <constraint firstAttribute="trailing" secondItem="XvC-si-Igh" secondAttribute="trailing" constant="1" id="Ogt-Hw-wZP"/>
+                                            <constraint firstItem="XvC-si-Igh" firstAttribute="top" secondItem="gPl-LZ-0Tg" secondAttribute="top" constant="1" id="QhO-Kg-Vw2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4gs-Ft-yZU"/>
+                                    <constraint firstItem="gPl-LZ-0Tg" firstAttribute="leading" secondItem="Qdl-Cb-oh9" secondAttribute="leading" constant="9" id="H2g-Ex-9gP"/>
+                                    <constraint firstItem="gPl-LZ-0Tg" firstAttribute="top" secondItem="Qdl-Cb-oh9" secondAttribute="top" constant="1" id="HhG-3I-nFp"/>
+                                    <constraint firstAttribute="bottom" secondItem="gPl-LZ-0Tg" secondAttribute="bottom" constant="1" id="I29-8E-Q6G"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiL-Ta-54m" customClass="VideoPlayerView" customModule="DG_BET" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="45" width="600" height="502"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-qV-Y2i">
+                                <rect key="frame" x="281.5" y="281.5" width="37" height="37"/>
+                                <color key="color" name="backgraundColor"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euQ-mf-cCV" userLabel="ToolBarView">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw1-C6-ZLM">
+                                        <rect key="frame" x="279" y="1" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bw1-C6-ZLM" secondAttribute="height" multiplier="1:1" id="G3t-9S-Kqe"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="9" minY="9" maxX="9" maxY="9"/>
+                                        <state key="normal" image="pauseVideo"/>
+                                        <connections>
+                                            <action selector="playPauseButton:" destination="2lg-uH-1OO" eventType="touchUpInside" id="Hl9-av-SR3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OWf-ns-Mqu"/>
+                                    <constraint firstAttribute="bottom" secondItem="bw1-C6-ZLM" secondAttribute="bottom" constant="1" id="e1R-lR-lNq"/>
+                                    <constraint firstItem="bw1-C6-ZLM" firstAttribute="top" secondItem="euQ-mf-cCV" secondAttribute="top" constant="1" id="gCZ-PX-mDu"/>
+                                    <constraint firstItem="bw1-C6-ZLM" firstAttribute="centerX" secondItem="euQ-mf-cCV" secondAttribute="centerX" id="yQN-9l-bRk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EXb-xG-2s5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="euQ-mf-cCV" firstAttribute="bottom" secondItem="EXb-xG-2s5" secondAttribute="bottom" id="3ie-DZ-nKf"/>
+                            <constraint firstItem="Qdl-Cb-oh9" firstAttribute="top" secondItem="EXb-xG-2s5" secondAttribute="top" id="3uH-Mj-oM2"/>
+                            <constraint firstItem="EXb-xG-2s5" firstAttribute="trailing" secondItem="ZiL-Ta-54m" secondAttribute="trailing" id="6Dw-lD-dLj"/>
+                            <constraint firstItem="PPp-Ug-I9q" firstAttribute="top" secondItem="7Ik-Qk-eea" secondAttribute="top" constant="1" id="9VV-20-Gpp"/>
+                            <constraint firstItem="ZiL-Ta-54m" firstAttribute="leading" secondItem="EXb-xG-2s5" secondAttribute="leading" id="Arf-TD-eQC"/>
+                            <constraint firstItem="Qdl-Cb-oh9" firstAttribute="leading" secondItem="EXb-xG-2s5" secondAttribute="leading" id="D9v-Ml-aEE"/>
+                            <constraint firstItem="PPp-Ug-I9q" firstAttribute="leading" secondItem="EXb-xG-2s5" secondAttribute="leading" constant="1" id="Edc-8S-0Pb"/>
+                            <constraint firstItem="EXb-xG-2s5" firstAttribute="trailing" secondItem="euQ-mf-cCV" secondAttribute="trailing" id="FOX-PV-nsW"/>
+                            <constraint firstItem="ZiL-Ta-54m" firstAttribute="top" secondItem="Qdl-Cb-oh9" secondAttribute="bottom" constant="1" id="YDH-ac-A0e"/>
+                            <constraint firstAttribute="bottom" secondItem="PPp-Ug-I9q" secondAttribute="bottom" constant="1" id="ZWZ-AR-igA"/>
+                            <constraint firstItem="EXb-xG-2s5" firstAttribute="trailing" secondItem="PPp-Ug-I9q" secondAttribute="trailing" constant="1" id="diY-7P-Zxo"/>
+                            <constraint firstItem="X6d-qV-Y2i" firstAttribute="centerX" secondItem="ZiL-Ta-54m" secondAttribute="centerX" id="e1Z-VV-upN"/>
+                            <constraint firstItem="euQ-mf-cCV" firstAttribute="top" secondItem="ZiL-Ta-54m" secondAttribute="bottom" constant="9" id="qZf-h1-yif"/>
+                            <constraint firstItem="EXb-xG-2s5" firstAttribute="trailing" secondItem="Qdl-Cb-oh9" secondAttribute="trailing" id="qmz-xD-3Ir"/>
+                            <constraint firstItem="X6d-qV-Y2i" firstAttribute="centerY" secondItem="7Ik-Qk-eea" secondAttribute="centerY" id="sbN-Jb-uC0"/>
+                            <constraint firstItem="euQ-mf-cCV" firstAttribute="leading" secondItem="EXb-xG-2s5" secondAttribute="leading" id="v27-ub-Koy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorVideo" destination="X6d-qV-Y2i" id="mli-jI-NlA"/>
+                        <outlet property="playPauseButtonLabel" destination="bw1-C6-ZLM" id="fUx-BV-joS"/>
+                        <outlet property="videoView" destination="ZiL-Ta-54m" id="ayy-yc-1Ms"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L6F-NN-wmW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u52-gp-rJ7">
+                    <connections>
+                        <action selector="playPauseGesture:" destination="2lg-uH-1OO" id="fDf-JP-bRh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="kDM-cf-K0M">
+                    <connections>
+                        <action selector="swipeBackGesture:" destination="2lg-uH-1OO" id="Fzo-S2-jgH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="kjl-Q7-lps">
+                    <connections>
+                        <action selector="swipeBackGesture:" destination="2lg-uH-1OO" id="LSF-Lb-nD2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="oNg-Ba-X08">
+                    <connections>
+                        <action selector="swipeBackGesture:" destination="2lg-uH-1OO" id="8eM-rZ-eNu"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Wtl-kw-Ya4">
+                    <connections>
+                        <action selector="swipeBackGesture:" destination="2lg-uH-1OO" id="DBH-su-2qz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exit" width="30" height="30"/>
+        <image name="pauseVideo" width="512" height="512"/>
+        <namedColor name="backgraundColor">
+            <color red="0.92156862745098034" green="0.80392156862745101" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

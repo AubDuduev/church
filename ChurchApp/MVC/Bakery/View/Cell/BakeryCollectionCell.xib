@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q8t-Oe-QsE" customClass="BakeryCollectionCell" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="186" height="229"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="186" height="229"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cS-XP-nah" userLabel="CommonView">
+                        <rect key="frame" x="0.0" y="0.0" width="186" height="229"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bakeryFonCell" translatesAutoresizingMaskIntoConstraints="NO" id="LOe-RY-v7b">
+                                <rect key="frame" x="0.0" y="0.0" width="186" height="229"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-qH-f0A" userLabel="CommonStackView">
+                                <rect key="frame" x="10" y="0.0" width="166" height="219"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMr-a7-KXx" userLabel="EmptyView">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="106"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хлеб мини Чиабатта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-8e-1vp">
+                                        <rect key="frame" x="0.0" y="119" width="166" height="17.5"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120 гр" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-wr-uK4">
+                                        <rect key="frame" x="0.0" y="149.5" width="166" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2X-QM-BzG">
+                                        <rect key="frame" x="0.0" y="179" width="166" height="40"/>
+                                        <color key="backgroundColor" name="buttonBukeryCell"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3Nl-rk-Wxe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="14"/>
+                                        <color key="tintColor" red="0.039215686274509803" green="0.058823529411764705" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Купить за 80 ₽"/>
+                                        <connections>
+                                            <action selector="pusgBakeryInfoVCButtonWithButton:" destination="q8t-Oe-QsE" eventType="touchUpInside" id="blr-5t-btt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bdQ-qH-f0A" firstAttribute="top" secondItem="1cS-XP-nah" secondAttribute="top" id="FYm-vr-F1K"/>
+                            <constraint firstAttribute="bottom" secondItem="bdQ-qH-f0A" secondAttribute="bottom" constant="10" id="H8M-39-G9j"/>
+                            <constraint firstAttribute="trailing" secondItem="LOe-RY-v7b" secondAttribute="trailing" id="JaN-h3-yvd"/>
+                            <constraint firstItem="LOe-RY-v7b" firstAttribute="leading" secondItem="1cS-XP-nah" secondAttribute="leading" id="Ljf-h4-3Rc"/>
+                            <constraint firstAttribute="bottom" secondItem="LOe-RY-v7b" secondAttribute="bottom" id="VNP-F6-aoA"/>
+                            <constraint firstAttribute="trailing" secondItem="bdQ-qH-f0A" secondAttribute="trailing" constant="10" id="VS8-5n-Zru"/>
+                            <constraint firstItem="bdQ-qH-f0A" firstAttribute="leading" secondItem="1cS-XP-nah" secondAttribute="leading" constant="10" id="ZxP-zf-u6W"/>
+                            <constraint firstItem="LOe-RY-v7b" firstAttribute="top" secondItem="1cS-XP-nah" secondAttribute="top" id="tYs-nr-5mk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1cS-XP-nah" firstAttribute="top" secondItem="q8t-Oe-QsE" secondAttribute="top" id="CHy-9p-l1V"/>
+                <constraint firstAttribute="trailing" secondItem="1cS-XP-nah" secondAttribute="trailing" id="VlS-x8-oy6"/>
+                <constraint firstItem="1cS-XP-nah" firstAttribute="leading" secondItem="q8t-Oe-QsE" secondAttribute="leading" id="nAs-XK-6bh"/>
+                <constraint firstAttribute="bottom" secondItem="1cS-XP-nah" secondAttribute="bottom" id="xNP-YA-eMF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="OtO-6Y-Eqv"/>
+            <size key="customSize" width="186" height="229"/>
+            <connections>
+                <outlet property="backgraundImageView" destination="LOe-RY-v7b" id="sCY-zm-26e"/>
+                <outlet property="priceProductButton" destination="S2X-QM-BzG" id="oO2-jh-o9z"/>
+                <outlet property="productNameLabel" destination="8r4-8e-1vp" id="HTB-zn-Bdl"/>
+                <outlet property="productWeightLabel" destination="kJv-wr-uK4" id="YwD-PM-K41"/>
+            </connections>
+            <point key="canvasLocation" x="236.23188405797103" y="203.90625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="bakeryFonCell" width="170" height="200"/>
+        <namedColor name="buttonBukeryCell">
+            <color red="0.94900000095367432" green="0.75700002908706665" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

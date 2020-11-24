@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NIp-r8-Glh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Bible View Controller-->
+        <scene sceneID="cpV-bj-0Et">
+            <objects>
+                <viewController storyboardIdentifier="BibleViewController" id="NIp-r8-Glh" customClass="BibleViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zm2-5S-njr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVY-wB-hYf" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TgE-4S-ISH" userLabel="CommonStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79G-1o-3ni" userLabel="NavBarView">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW9-f5-Fjp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="vW9-f5-Fjp" secondAttribute="height" multiplier="1:1" id="tgM-Zn-o3h"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="tabBarFon"/>
+                                                        <state key="normal" image="exit"/>
+                                                        <connections>
+                                                            <action selector="backButtonWithButton:" destination="NIp-r8-Glh" eventType="touchUpInside" id="twa-uv-KdS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Библия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQy-cS-dZK">
+                                                        <rect key="frame" x="60" y="0.0" width="294" height="60"/>
+                                                        <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="24"/>
+                                                        <color key="textColor" name="projectBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="navBarFon"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="zQy-cS-dZK" secondAttribute="trailing" constant="60" id="3tJ-dg-ls6"/>
+                                                    <constraint firstAttribute="height" constant="60" id="DAI-RS-xnZ"/>
+                                                    <constraint firstItem="zQy-cS-dZK" firstAttribute="leading" secondItem="vW9-f5-Fjp" secondAttribute="trailing" id="FFe-by-94G"/>
+                                                    <constraint firstItem="vW9-f5-Fjp" firstAttribute="leading" secondItem="79G-1o-3ni" secondAttribute="leading" id="Hmp-lx-xE5"/>
+                                                    <constraint firstItem="zQy-cS-dZK" firstAttribute="top" secondItem="79G-1o-3ni" secondAttribute="top" id="Rwn-pn-3aU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="zQy-cS-dZK" secondAttribute="bottom" id="YyZ-z9-Ytx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="vW9-f5-Fjp" secondAttribute="bottom" id="bFz-b2-mWZ"/>
+                                                    <constraint firstItem="vW9-f5-Fjp" firstAttribute="top" secondItem="79G-1o-3ni" secondAttribute="top" id="dFp-Qc-FFm"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agj-cI-Ldc" userLabel="SwitchView">
+                                                <rect key="frame" x="0.0" y="60" width="414" height="40"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6zY-63-vQA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <segments>
+                                                            <segment title="Новый завет"/>
+                                                            <segment title="Ветхий завет"/>
+                                                        </segments>
+                                                        <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="bibleTestamentButtonWithControl:" destination="NIp-r8-Glh" eventType="valueChanged" id="dR1-fV-dWP"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="A00-mf-P87"/>
+                                                    <constraint firstItem="6zY-63-vQA" firstAttribute="top" secondItem="agj-cI-Ldc" secondAttribute="top" id="FVQ-g3-HMC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6zY-63-vQA" secondAttribute="bottom" id="YbF-2f-HCb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6zY-63-vQA" secondAttribute="trailing" id="e3M-YA-oW2"/>
+                                                    <constraint firstItem="6zY-63-vQA" firstAttribute="leading" secondItem="agj-cI-Ldc" secondAttribute="leading" id="jOs-i6-Q7K"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geE-rU-i1x">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="2"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="gJQ-Wc-k71"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-FI-83o" userLabel="TableViewView">
+                                                <rect key="frame" x="0.0" y="102" width="414" height="716"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CzY-4E-Tan">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="ge1-Ru-n5f" id="71d-WY-0TN"/>
+                                                            <outlet property="delegate" destination="ge1-Ru-n5f" id="7Vp-TT-aJz"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="CzY-4E-Tan" secondAttribute="bottom" id="3j6-ko-hnX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="CzY-4E-Tan" secondAttribute="trailing" id="Esf-2x-mr4"/>
+                                                    <constraint firstItem="CzY-4E-Tan" firstAttribute="top" secondItem="ZHk-FI-83o" secondAttribute="top" id="MS4-PS-K0s"/>
+                                                    <constraint firstItem="CzY-4E-Tan" firstAttribute="leading" secondItem="ZHk-FI-83o" secondAttribute="leading" id="rYg-bL-jCU"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TgE-4S-ISH" secondAttribute="trailing" id="cYi-kW-bhq"/>
+                                    <constraint firstItem="TgE-4S-ISH" firstAttribute="top" secondItem="rVY-wB-hYf" secondAttribute="top" id="hjg-iV-3cr"/>
+                                    <constraint firstItem="TgE-4S-ISH" firstAttribute="leading" secondItem="rVY-wB-hYf" secondAttribute="leading" id="nq9-sx-ezx"/>
+                                    <constraint firstAttribute="bottom" secondItem="TgE-4S-ISH" secondAttribute="bottom" id="uk7-ta-rkK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1ek-b6-4qi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rVY-wB-hYf" secondAttribute="trailing" id="TRL-N0-MwN"/>
+                            <constraint firstItem="rVY-wB-hYf" firstAttribute="leading" secondItem="zm2-5S-njr" secondAttribute="leading" id="XFd-hJ-RQj"/>
+                            <constraint firstItem="rVY-wB-hYf" firstAttribute="top" secondItem="1ek-b6-4qi" secondAttribute="top" id="c7R-qm-iyI"/>
+                            <constraint firstItem="1ek-b6-4qi" firstAttribute="bottom" secondItem="rVY-wB-hYf" secondAttribute="bottom" id="kYQ-Il-6sO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bibleTable" destination="ge1-Ru-n5f" id="Gbo-Ki-MIN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXB-Oc-Ozd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="ge1-Ru-n5f" customClass="BibleTable" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-33" y="-164"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="exit" width="30" height="30"/>
+        <namedColor name="navBarFon">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="projectBlue">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabBarFon">
+            <color red="0.039000000804662704" green="0.059000000357627869" blue="0.11400000005960464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

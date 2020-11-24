@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-ui-display-bold.otf">
+            <string>SFUIDisplay-Bold</string>
+        </array>
+        <array key="sf-ui-display-medium.otf">
+            <string>SFUIDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="oGl-Tz-Qwb" customClass="ServicesTableCell" customModule="ChurchApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="417" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oGl-Tz-Qwb" id="BOa-mI-uOM">
+                <rect key="frame" x="0.0" y="0.0" width="417" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBV-fq-FNB" userLabel="CommonView">
+                        <rect key="frame" x="12" y="0.0" width="393" height="70"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDF-sR-QaM" userLabel="CornerRadiusView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servoceBacgraundCell" translatesAutoresizingMaskIntoConstraints="NO" id="WBV-Lw-r5M">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="serviceIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GKe-ve-2aG">
+                                        <rect key="frame" x="12" y="18" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="78z-3D-cOf"/>
+                                            <constraint firstAttribute="width" constant="33" id="see-xx-hDY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1ud-S1-Bme" userLabel="TextStackView">
+                                        <rect key="frame" x="63" y="16" width="277" height="38"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Продукты из нашей пекарни" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-QR-vBm">
+                                                <rect key="frame" x="0.0" y="0.0" width="277" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обновления в меню каждый месяц" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bL2-Nw-yms">
+                                                <rect key="frame" x="0.0" y="22.5" width="277" height="15.5"/>
+                                                <fontDescription key="fontDescription" name="SFUIDisplay-Medium" family="SF UI Display" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="serviceArrow" translatesAutoresizingMaskIntoConstraints="NO" id="w00-SP-79E">
+                                        <rect key="frame" x="369" y="25" width="12" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="NEZ-G4-oHn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WBV-Lw-r5M" secondAttribute="trailing" id="2aF-vU-boE"/>
+                                    <constraint firstAttribute="bottom" secondItem="WBV-Lw-r5M" secondAttribute="bottom" id="7Ro-Wc-brC"/>
+                                    <constraint firstItem="GKe-ve-2aG" firstAttribute="leading" secondItem="jDF-sR-QaM" secondAttribute="leading" constant="12" id="BSx-qf-v5y"/>
+                                    <constraint firstItem="1ud-S1-Bme" firstAttribute="leading" secondItem="GKe-ve-2aG" secondAttribute="trailing" constant="18" id="Bl1-Nc-pff"/>
+                                    <constraint firstItem="WBV-Lw-r5M" firstAttribute="leading" secondItem="jDF-sR-QaM" secondAttribute="leading" id="CRo-oH-e3z"/>
+                                    <constraint firstItem="WBV-Lw-r5M" firstAttribute="top" secondItem="jDF-sR-QaM" secondAttribute="top" id="IoT-fx-JQN"/>
+                                    <constraint firstItem="w00-SP-79E" firstAttribute="top" secondItem="jDF-sR-QaM" secondAttribute="top" constant="25" id="IwO-Lj-CRb"/>
+                                    <constraint firstAttribute="trailing" secondItem="w00-SP-79E" secondAttribute="trailing" constant="12" id="JGM-H3-bfO"/>
+                                    <constraint firstItem="GKe-ve-2aG" firstAttribute="top" secondItem="jDF-sR-QaM" secondAttribute="top" constant="18" id="L99-f0-oUL"/>
+                                    <constraint firstItem="w00-SP-79E" firstAttribute="leading" secondItem="1ud-S1-Bme" secondAttribute="trailing" constant="29" id="PW0-16-Jns"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ud-S1-Bme" secondAttribute="bottom" constant="16" id="U6w-Em-S11"/>
+                                    <constraint firstAttribute="bottom" secondItem="w00-SP-79E" secondAttribute="bottom" constant="25" id="d8R-bo-xVN"/>
+                                    <constraint firstItem="1ud-S1-Bme" firstAttribute="top" secondItem="jDF-sR-QaM" secondAttribute="top" constant="16" id="opj-ZU-vR2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCM-YB-sPS">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pushVCButtonWithButton:" destination="oGl-Tz-Qwb" eventType="touchUpInside" id="zsn-vI-lEC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jDF-sR-QaM" firstAttribute="leading" secondItem="UBV-fq-FNB" secondAttribute="leading" id="1oU-Ej-qyw"/>
+                            <constraint firstAttribute="bottom" secondItem="jDF-sR-QaM" secondAttribute="bottom" id="VOj-zZ-A8Q"/>
+                            <constraint firstAttribute="trailing" secondItem="jDF-sR-QaM" secondAttribute="trailing" id="dcr-UK-4wy"/>
+                            <constraint firstItem="jDF-sR-QaM" firstAttribute="top" secondItem="UBV-fq-FNB" secondAttribute="top" id="qZ9-LK-4WN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UBV-fq-FNB" firstAttribute="top" secondItem="BOa-mI-uOM" secondAttribute="top" id="N6e-NU-EQu"/>
+                    <constraint firstAttribute="bottom" secondItem="UBV-fq-FNB" secondAttribute="bottom" constant="14" id="Ova-ky-owz"/>
+                    <constraint firstAttribute="trailing" secondItem="UBV-fq-FNB" secondAttribute="trailing" constant="12" id="XbD-i2-JwG"/>
+                    <constraint firstItem="UBV-fq-FNB" firstAttribute="leading" secondItem="BOa-mI-uOM" secondAttribute="leading" constant="12" id="hZr-cG-xq6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="commonView" destination="UBV-fq-FNB" id="y9u-gj-nHo"/>
+                <outlet property="cornerRadiusView" destination="jDF-sR-QaM" id="HVn-kO-IMA"/>
+                <outlet property="serviceBackgraundIamgeView" destination="WBV-Lw-r5M" id="q2B-Xi-M0W"/>
+                <outlet property="serviceDescriptionLabel" destination="bL2-Nw-yms" id="uzK-3D-tlo"/>
+                <outlet property="serviceIaconImageView" destination="GKe-ve-2aG" id="jck-Mz-fVh"/>
+                <outlet property="serviceTitleLabel" destination="Ggi-QR-vBm" id="sSj-iW-4Bm"/>
+            </connections>
+            <point key="canvasLocation" x="223.91304347826087" y="24.107142857142858"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="serviceArrow" width="12" height="20"/>
+        <image name="serviceIcon" width="32" height="27"/>
+        <image name="servoceBacgraundCell" width="351" height="70"/>
+    </resources>
+</document>

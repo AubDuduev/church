@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ScrollTableButtonView" customModule="DgBetTrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z76-W7-8jb">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <state key="normal" backgroundImage="scrollArrow"/>
+                    <connections>
+                        <action selector="scrollButtonLabelWithButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="sXy-bX-IbZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="z76-W7-8jb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Cdr-Lc-iy0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="z76-W7-8jb" secondAttribute="bottom" id="ban-YA-rOf"/>
+                <constraint firstItem="z76-W7-8jb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="d9j-cD-cev"/>
+                <constraint firstAttribute="trailing" secondItem="z76-W7-8jb" secondAttribute="trailing" id="gWW-OW-xzo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="106" y="157"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="scrollArrow" width="250" height="250"/>
+    </resources>
+</document>

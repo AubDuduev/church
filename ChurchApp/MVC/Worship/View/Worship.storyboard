@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D3k-PV-0nS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Worship View Controller-->
+        <scene sceneID="N7q-y6-cnl">
+            <objects>
+                <viewController storyboardIdentifier="WorshipViewController" id="D3k-PV-0nS" customClass="WorshipViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMQ-b7-47h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5x-MJ-yKj" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="aMp-Hy-RC9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWK-rq-60Z" userLabel="CollctionViewView">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundStart" translatesAutoresizingMaskIntoConstraints="NO" id="oqg-Cl-Ag2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                    </imageView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g5P-WY-Oca">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="me1-PT-CXI">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="aOI-BB-cpY" id="Pjn-eV-WiT"/>
+                                            <outlet property="delegate" destination="aOI-BB-cpY" id="E2O-5B-ACM"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="g5P-WY-Oca" firstAttribute="top" secondItem="QWK-rq-60Z" secondAttribute="top" id="Jap-Ue-Bf5"/>
+                                    <constraint firstAttribute="trailing" secondItem="oqg-Cl-Ag2" secondAttribute="trailing" id="Lkb-Ju-ohx"/>
+                                    <constraint firstItem="oqg-Cl-Ag2" firstAttribute="leading" secondItem="QWK-rq-60Z" secondAttribute="leading" id="SVs-gb-ApX"/>
+                                    <constraint firstAttribute="bottom" secondItem="g5P-WY-Oca" secondAttribute="bottom" id="VUG-PM-HAn"/>
+                                    <constraint firstAttribute="trailing" secondItem="g5P-WY-Oca" secondAttribute="trailing" id="XTO-Ls-Wj1"/>
+                                    <constraint firstAttribute="bottom" secondItem="oqg-Cl-Ag2" secondAttribute="bottom" id="dg8-yB-abn"/>
+                                    <constraint firstItem="oqg-Cl-Ag2" firstAttribute="top" secondItem="QWK-rq-60Z" secondAttribute="top" id="fej-YT-f0K"/>
+                                    <constraint firstItem="g5P-WY-Oca" firstAttribute="leading" secondItem="QWK-rq-60Z" secondAttribute="leading" id="iFO-4x-nEm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GA6-a1-oRI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QWK-rq-60Z" firstAttribute="leading" secondItem="eMQ-b7-47h" secondAttribute="leading" id="3XS-gy-Pgz"/>
+                            <constraint firstAttribute="trailing" secondItem="QWK-rq-60Z" secondAttribute="trailing" id="ACZ-kQ-8kt"/>
+                            <constraint firstItem="E5x-MJ-yKj" firstAttribute="leading" secondItem="eMQ-b7-47h" secondAttribute="leading" id="ESo-Tv-Nl8"/>
+                            <constraint firstAttribute="trailing" secondItem="E5x-MJ-yKj" secondAttribute="trailing" id="Q3x-bN-Khe"/>
+                            <constraint firstItem="QWK-rq-60Z" firstAttribute="top" secondItem="E5x-MJ-yKj" secondAttribute="bottom" id="dK9-in-SvC"/>
+                            <constraint firstItem="E5x-MJ-yKj" firstAttribute="top" secondItem="GA6-a1-oRI" secondAttribute="top" id="lRT-Fu-U7D"/>
+                            <constraint firstItem="GA6-a1-oRI" firstAttribute="bottom" secondItem="QWK-rq-60Z" secondAttribute="bottom" id="sya-Kt-j9g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="programTable" destination="Sr2-AE-40i" id="HZB-KW-sLy"/>
+                        <outlet property="worshipCollection" destination="aOI-BB-cpY" id="G5y-r3-sWq"/>
+                        <outlet property="worshipCollectionView" destination="g5P-WY-Oca" id="7ts-lk-Mtf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyY-Mg-bkR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="aOI-BB-cpY" customClass="WorshipCollection" customModule="ChurchApp" customModuleProvider="target"/>
+                <customObject id="Sr2-AE-40i" customClass="ProgramTable" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="167.41071428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundStart" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

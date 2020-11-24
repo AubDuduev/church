@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rbf-lT-lIY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News View Controller-->
+        <scene sceneID="IZR-hx-NI9">
+            <objects>
+                <viewController storyboardIdentifier="NewsViewController" id="Rbf-lT-lIY" customClass="NewsViewController" customModule="ChurchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kYD-rk-dbh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2B-FQ-MB5" userLabel="NavBarView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="xwE-dq-hfo"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUg-gP-9r0" userLabel="CommonView">
+                                <rect key="frame" x="0.0" y="103" width="414" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgraundStart" translatesAutoresizingMaskIntoConstraints="NO" id="axq-VJ-eK5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                    </imageView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nWO-Oi-38x">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="rl0-8t-A8p" id="ery-Tr-skt"/>
+                                            <outlet property="delegate" destination="rl0-8t-A8p" id="rVx-pc-i4k"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="axq-VJ-eK5" secondAttribute="trailing" id="SoG-xX-W36"/>
+                                    <constraint firstItem="nWO-Oi-38x" firstAttribute="top" secondItem="cUg-gP-9r0" secondAttribute="top" id="eDo-FT-PD8"/>
+                                    <constraint firstAttribute="bottom" secondItem="axq-VJ-eK5" secondAttribute="bottom" id="kaK-Ly-wtf"/>
+                                    <constraint firstItem="axq-VJ-eK5" firstAttribute="top" secondItem="cUg-gP-9r0" secondAttribute="top" id="my9-Vq-MDh"/>
+                                    <constraint firstItem="axq-VJ-eK5" firstAttribute="leading" secondItem="cUg-gP-9r0" secondAttribute="leading" id="qfz-hP-1Dw"/>
+                                    <constraint firstItem="nWO-Oi-38x" firstAttribute="leading" secondItem="cUg-gP-9r0" secondAttribute="leading" id="rFy-Sm-yD3"/>
+                                    <constraint firstAttribute="trailing" secondItem="nWO-Oi-38x" secondAttribute="trailing" id="uoG-8C-uDd"/>
+                                    <constraint firstAttribute="bottom" secondItem="nWO-Oi-38x" secondAttribute="bottom" id="z3f-Pn-B5b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cUg-gP-9r0" firstAttribute="leading" secondItem="kYD-rk-dbh" secondAttribute="leading" id="Ete-8z-91q"/>
+                            <constraint firstItem="cUg-gP-9r0" firstAttribute="top" secondItem="c2B-FQ-MB5" secondAttribute="bottom" id="FB0-A2-R5C"/>
+                            <constraint firstItem="c2B-FQ-MB5" firstAttribute="top" secondItem="gBm-UQ-Kuu" secondAttribute="top" id="M7A-JD-XKK"/>
+                            <constraint firstAttribute="trailing" secondItem="c2B-FQ-MB5" secondAttribute="trailing" id="Ur7-N5-UvC"/>
+                            <constraint firstItem="c2B-FQ-MB5" firstAttribute="leading" secondItem="kYD-rk-dbh" secondAttribute="leading" id="Vii-73-P2B"/>
+                            <constraint firstItem="gBm-UQ-Kuu" firstAttribute="bottom" secondItem="cUg-gP-9r0" secondAttribute="bottom" constant="25" id="Xj6-CW-o3a"/>
+                            <constraint firstAttribute="trailing" secondItem="cUg-gP-9r0" secondAttribute="trailing" id="uhS-pi-yv1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gBm-UQ-Kuu"/>
+                    </view>
+                    <connections>
+                        <outlet property="newsTable" destination="rl0-8t-A8p" id="YtG-5Y-Bif"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAY-PM-Ql1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="rl0-8t-A8p" customClass="NewsTable" customModule="ChurchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="540.57971014492762" y="-157.36607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgraundStart" width="375" height="812"/>
+    </resources>
+</document>
